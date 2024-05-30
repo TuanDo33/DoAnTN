@@ -106,13 +106,13 @@
                             <div class="input_container">
                                 <input type="radio" name="txttinhtrang" value="xe cũ">
                                 <div class="radio_tile">
-                                    <label for="">xe cũ</label>
+                                    <label for="">hàng cũ</label>
                                 </div>
                             </div>
                             <div class="input_container">
                                 <input type="radio" name="txttinhtrang" value="xe mới">
                                 <div class="radio_tile">
-                                    <label for="">xe mới</label>
+                                    <label for="">hàng mới</label>
                                 </div>
                             </div>
                         </div>
@@ -143,7 +143,7 @@
                         <input type="file" style="margin-left:25%;margin-top:25px;" name="txtfile" multiple="true">
                     </div>
 
-                    <div style="width:50%;margin-top:2%;margin-left:25%;">
+                    <!-- <div style="width:50%;margin-top:2%;margin-left:25%;">
                         <div style="border:1px solid #5e5e5f;width:100%;height:40px;border-radius:4px;">
                             <label style="height:7px;color: #A5A5A5;font-size:12px;margin-left:10px;">Hãng xe</label>
                             <select style="width: 100%; margin-top:-2px;" class="nut2" name="txthangxe">
@@ -170,7 +170,7 @@
 
                             </select>
                         </div>
-                    </div>
+                    </div> -->
                     <div style="width:50%;margin-top:1%;margin-left:25%;">
                         <div style="border:1px solid #5e5e5f;width:100%;height:40px;border-radius:4px;">
                             <label style="height:7px;color: #A5A5A5;font-size:12px;margin-left:10px;"> Dòng xe</label>
@@ -464,11 +464,11 @@
                         </div>
                     </div>
                     <!-- </div> -->
-                    <div style="width:50%;margin-left:25%;margin-top:2%;">
+                    <!-- <div style="width:50%;margin-left:25%;margin-top:2%;">
                         <button style="background-color: #F05626;border: 1px solid #F05626;color:#fff;" type="submit" class="nut1" >Tiếp tục</button>
-                    </div>
+                    </div> -->
                     <div style="width:50%;margin-left:25%;margin-top:2%;">
-                        <button style="background-color:#fff;color: #F05626;border: 1px solid #F05626;" type="submit" class="nut1" name="txtsub">Lưu tin</button>
+                        <button style="background-color:#fff;color: #F05626;border: 1px solid #F05626;" type="submit" class="nut1" name="txtsub">đăng sản phẩm</button>
                     </div>
                 </div>
             </form>

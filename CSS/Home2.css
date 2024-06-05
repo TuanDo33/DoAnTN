@@ -68,11 +68,11 @@
     vertical-align: middle;
     white-space: nowrap;
     position: relative;
-  }                  
+  }                 
 .container-1 input#search{
     width: 350px;
     height: 50px;
-    background: #2b303b;
+    background: #ffffff;
     border: none;
     font-size: 10pt;
     float: left;
@@ -92,10 +92,10 @@
     color: #4f5b66;
     margin-top:35px;
   }
-/* .container-1 input#search:hover, .container-1 input#search:focus, .container-1 input#search:active{
+.container-1 input#search:hover, .container-1 input#search:focus, .container-1 input#search:active{
     outline:none;
     background: #ffffff;
-  }   */
+  }  
 
 /* menu  */
 ul {

@@ -517,7 +517,7 @@
                     $_POST['txtdiachi']
                 );
                 if ($insert) echo "<script>alert('thêm mới sản phẩm thành công')
-                    window.location='.upProduct.php';
+                    window.location='index.php?act=qlbd';
                     </script>";
                 //else echo"<script>alert('thêm mới không thành công')</script>";
             }

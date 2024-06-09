@@ -1,3 +1,8 @@
+<?php 
+    if(!empty($_SESSION['email'])){
+        header('Location: trangchu.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +21,7 @@
 </head>
 
 <body class="box">
+<form role="form" method="post">
     <div>
         <div class="login">
             <div style="margin-top:10%;margin-bottom:10%;">
@@ -44,12 +50,12 @@
                     </div> -->
                     <div class="form_group">
                         <label class="sub_title row" for="name">Name</label>
-                        <input placeholder="Enter your full name" class="form_style row" type="text">
+                        <input placeholder="Enter your full name" class="form_style row" type="text" name="txtusername">
                     </div>
                     <div class="form_group">
                         <label class="sub_title row" for="password">Password</label>
                         <input placeholder="Enter your password" id="password" class="form_style row"
-                            type="password">
+                            type="password" name="txtpass">
                     </div>
                 </div>
                 <div>
@@ -64,7 +70,7 @@
                     </div>
                 </div>
                 <div style="margin-left:17%;margin-top:3%; width:100%;" class="row gx-0">
-                    <div class="col"><button type="button" class="btn btn-outline-danger btn2" style="width:100px;">Đăng
+                    <div class="col"><button type="button" class="btn btn-outline-danger btn2" style="width:100px;" name="txtsub">Đăng
                             nhập</button></div>
                     <div class="col" style="margin-left:-20%;"><button type="button" class="btn btn-danger btn2"
                             style="width:100px;"><a href="register.php" style="text-decoration: none; color: #ffff;">Đăng ký</a></button></div>
@@ -78,6 +84,30 @@
             </div>
         </div>
     </div>
+    <?php 
+                                         include('control_user.php');
+                                         if(isset($_POST['txtsub'])){
+                                             $getdata = new data();
+                                             $contact = $getdata->select_pass(
+                                                $_POST['txtusername'],
+                                                $_POST['txtpass']
+                                            );
+                                             $row = mysqli_fetch_assoc($contact); //sẽ tìm và trả về một dòng kết quả của một truy vấn MySQL nào đó dưới dạng một mảng kết hợp.
+                                             if (empty($_POST['txtusername']) || empty($_POST['txtpass'])) {
+                                                 echo '<script>alert("Bạn chưa nhập mật khẩu or tên tài khoản")</script>';
+                                             }else{
+                                                // echo json_encode($row);
+                                                if(mysqli_num_rows($contact) > 0){ //Một int đại diện cho số hàng được tìm nạp. Trả về 0ở chế độ không có bộ đệm trừ khi tất cả các hàng đã được tìm nạp từ máy chủ.
+                                                    if($_POST['txtpass'] == $row['password']){
+                                                        $_SESSION['login'] = true;
+                                                        $_SESSION['id'] = $row['id'];
+                                                        header('location:trangchu.html');
+                                                    }
+                                                }
+                                             }
+                                        }
+                                    ?>
+                                    </form>
 </body>
 
 </html>

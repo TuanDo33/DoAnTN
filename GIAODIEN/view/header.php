@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../../CSS/Home2.css">
+    <link rel="stylesheet" href="../../CSS/menu.css">
 <header class="header navbar navbar-expand">
             <a href="" class="navbar-brand text-white" style="margin-left:5%;">
                 <img src="/Img/_3e0757bb-eae4-4033-bb53-4e6b11d61967.jpg" alt="" style="width:65px; height:65px;"></a>

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../CSS/LoginRegister.css">
-    <link rel="stylesheet" href="/fonts/css/all.min.css">
+    <link rel="stylesheet" href="../../CSS/LoginRegister.css">
+    <link rel="stylesheet" href="/../fonts/css/all.min.css">
     <link rel="icon" href="../Img/_3e0757bb-eae4-4033-bb53-4e6b11d61967.jpg" type="image/x-icon">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
@@ -67,7 +67,7 @@
                     <div class="col"><button type="button" class="btn btn-outline-danger btn2" style="width:100px;">Đăng
                             nhập</button></div>
                     <div class="col" style="margin-left:-20%;"><button type="button" class="btn btn-danger btn2"
-                            style="width:100px;"><a href="register.html" style="text-decoration: none; color: #ffff;">Đăng ký</a></button></div>
+                            style="width:100px;"><a href="register.php" style="text-decoration: none; color: #ffff;">Đăng ký</a></button></div>
                 </div>
                 <!-- <div class="row gx-0" style="margin-left:23%;margin-top:3%;width:100%;">
                     <p class="col">Bạn chưa có tài khoản ?</p>

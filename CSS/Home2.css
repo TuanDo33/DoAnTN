@@ -244,3 +244,10 @@ img {
   transform: scale(1.02);
 }
 /*  */
+/* danh sách */
+.page-item a {
+  color: #f05626;
+}
+.page-item a:hover {
+  color: #f05626;
+}

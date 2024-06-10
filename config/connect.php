@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "choxe");
+$conn = new mysqli("localhost", "root", "", "doantn");
 // Check connection
 if ($conn->connect_errno) {
    echo "Lỗi kết nối database : " . $conn->connect_error;

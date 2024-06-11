@@ -44,7 +44,7 @@
                                 <p style="margin-top:3%;">Have an Account? <a class="link" href="login1.php">Login
                                         Herel</a></p><a class="link" href="">
                                 </a>
-                            </div><a class="link" href="">
+                            </div><a class="link" href="trangchu.html" >Home
                             </a>
                         </form>
                     </div>
@@ -77,6 +77,7 @@
             $name = $_POST['txtusername'];
             if ($contact) {
                 echo '<script>alert("Cảm ơn bạn ' . $name . ' đã đăng ký thành công!")</script>';
+                header('location:login1.php');
             } else {
                 echo '<script>alert("Tài khoản đã có vui lòng đăng ký lại!")</script>';
             }

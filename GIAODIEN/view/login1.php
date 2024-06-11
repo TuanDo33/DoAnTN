@@ -21,7 +21,6 @@ if (!empty($_SESSION['email'])) {
 </head>
 
 <body class="box">
-    <form role="form" method="post">
         <div>
             <div class="login">
                 <div style="margin-top:10%;margin-bottom:10%;">
@@ -54,47 +53,47 @@ if (!empty($_SESSION['email'])) {
                             </div>
                         </div>
                         <div style="margin-left:17%;margin-top:3%; width:100%;" class="row gx-0">
-                            <div class="col"><button class="btn btn-outline-danger btn2"
-                                style="width:100px;" name="txtsub" type="submit">
-                                Login Now
+                            <div class="col"><button class="btn btn-outline-danger btn2" style="width:100px;"
+                                    name="txtsub" type="submit">
+                                    Login Now
                                 </button></div>
                             <div class="col" style="margin-left:-20%;"><button type="button" class="btn btn-danger btn2"
                                     style="width:100px;"><a href="register1.php"
                                         style="text-decoration: none; color: #ffff;">Đăng ký</a></button></div>
+                                        <a href="trangchu.html" class="link" style="margin-top:4%;margin-left:24%;">Home</a>
                         </div>
                         <!-- <div class="row gx-0" style="margin-left:23%;margin-top:3%;width:100%;">
                     <p class="col">Bạn chưa có tài khoản ?</p>
                     <p class="col" style="margin-left:-13%;"><a href=""
                             style="text-decoration: none;color: #e4c82a;">Đăng ký</a></p>
                 </div> -->
+                        <?php
+                        include ('control_user.php');
+                        if (isset($_POST['txtsub'])) {
+                            $getdata = new data();
+                            $contact = $getdata->select_pass(
+                                $_POST['txtusername'],
+                                $_POST['txtpass']
+                            );
+                            $row = mysqli_fetch_assoc($contact); //sẽ tìm và trả về một dòng kết quả của một truy vấn MySQL nào đó dưới dạng một mảng kết hợp.
+                            if (empty($_POST['txtusername']) || empty($_POST['txtpass'])) {
+                                echo '<script>alert("Bạn chưa nhập mật khẩu or tên tài khoản")</script>';
+                            } else {
+                                // echo json_encode($row);
+                                if (mysqli_num_rows($contact) > 0) { //Một int đại diện cho số hàng được tìm nạp. Trả về 0ở chế độ không có bộ đệm trừ khi tất cả các hàng đã được tìm nạp từ máy chủ.
+                                    if ($_POST['txtpass'] == $row['password']) {
+                                        $_SESSION['login'] = true;
+                                        $_SESSION['id'] = $row['id'];
+                                        header('location:trangchu.html');
+                                    }
+                                }
+                            }
+                        }
+                        ?>
                     </form>
                 </div>
             </div>
         </div>
-        <?php
-        include ('control_user.php');
-        if (isset($_POST['txtsub'])) {
-            $getdata = new data();
-            $contact = $getdata->select_pass(
-                $_POST['txtusername'],
-                $_POST['txtpass']
-            );
-            $row = mysqli_fetch_assoc($contact); //sẽ tìm và trả về một dòng kết quả của một truy vấn MySQL nào đó dưới dạng một mảng kết hợp.
-            if (empty($_POST['txtusername']) || empty($_POST['txtpass'])) {
-                echo '<script>alert("Bạn chưa nhập mật khẩu or tên tài khoản")</script>';
-            } else {
-                // echo json_encode($row);
-                if (mysqli_num_rows($contact) > 0) { //Một int đại diện cho số hàng được tìm nạp. Trả về 0ở chế độ không có bộ đệm trừ khi tất cả các hàng đã được tìm nạp từ máy chủ.
-                    if ($_POST['txtpass'] == $row['password']) {
-                        $_SESSION['login'] = true;
-                        $_SESSION['id'] = $row['id'];
-                        header('location:trangchu.html');
-                    }
-                }
-            }
-        }
-        ?>
-    </form>
 </body>
 
 </html>

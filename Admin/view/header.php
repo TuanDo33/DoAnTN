@@ -20,9 +20,10 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
          <div class="navbar-nav">
-            <a class="nav-item nav-link " href="index.php?act=qltk">Quản Lý tài khoản User </a>
+            <a class="nav-item nav-link " href="index.php?act=qltk">Quản Lý tài khoản UserAdmin </a>
             <a class="nav-item nav-link" href="index.php?act=qlsp">Quản lý danh sách sản phẩm</a>
             <a class="nav-item nav-link" href="index.php?act=qlbd">Đăng sản phẩm </a>
+            <a class="nav-item nav-link" href="index.php?act=qltk2">quản lý user </a>
             <a class="nav-item nav-link" href="index.php?act=logout">đăng xuất</a>
             <a class="nav-item nav-link" href="../models/change_pass.php?act=change-password">Đổi mật khẩu</a>
          </div>

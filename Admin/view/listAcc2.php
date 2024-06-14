@@ -6,7 +6,7 @@
             <tr>
                <th scope=" col">#</th>
                <th scope="col">Name</th>
-               <th scope="col">Phone Number</th>
+               <!-- <th scope="col">Phone Number</th> -->
                <th scope="col">Email</th>
                <th scope="col">Password</th>
                <th scope="col">Edit</th>
@@ -15,22 +15,21 @@
          </thead>
          <tbody>
          <?php
-               include('../config/control.php');
+               include('../GIAODIEN/view/control_user.php');
                $get_data=new data();
-               $select_all=$get_data->se_acc('accounts');
+               $select_all=$get_data->se_acc('accounts_user');
                foreach ($select_all as $se_acc)
                {
                ?>
             <tr></tr>
             <tr>
                <th scope="row"><?php echo $se_acc['id']?></th>
-               <td><?php echo $se_acc['name_acc']?></td>
-               <td><?php echo $se_acc['phone']?></td>
-               <td><?php echo $se_acc['email_acc']?></td>
-               <td><?php echo $se_acc['pass_acc']?></td>
-               <td><button type="button" class="btn btn-warning"><a href="../models/up_sign.php?id=<?php echo $se_acc['id']?>">
+               <td><?php echo $se_acc['username']?></td>
+               <td><?php echo $se_acc['email']?></td>
+               <td><?php echo $se_acc['password']?></td>
+               <td><button type="button" class="btn btn-warning"><a href="<?php echo $se_acc['id']?>">
                                                 <span>Edit</span></a></button></td>
-               <td><button type="button" class="btn btn-danger"><a href="../config/delete_acc.php?del_acc=<?php echo $se_acc['id']?>"
+               <td><button type="button" class="btn btn-danger"><a href="../config/delete_acc2.php?del_acc2=<?php echo $se_acc['id']?>"
                                                 onClick="return(confirm('bạn có chắc chắn muốn xóa'))">
                                             <span>Del</span></a></button></td>
             </tr>

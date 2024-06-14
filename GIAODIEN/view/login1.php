@@ -24,7 +24,7 @@ if (!empty($_SESSION['email'])) {
         <div>
             <div class="login">
                 <div style="margin-top:10%;margin-bottom:10%;">
-                    <form role="form" method="post">
+                    <form role="form" method="post" >
                         <p style="font-size:40px;margin-left:35%;margin-top:3%;color: #264143;font-weight: 800;">
                             Login</p>
                         <div style="margin-left:14%;margin-top:7%;">
@@ -84,7 +84,7 @@ if (!empty($_SESSION['email'])) {
                                     if ($_POST['txtpass'] == $row['password']) {
                                         $_SESSION['login'] = true;
                                         $_SESSION['id'] = $row['id'];
-                                        header('location:trangchu.html');
+                                        header('location:trangchu.php');
                                     }
                                 }
                             }

@@ -2,7 +2,8 @@
 session_start();
 if (!isset($_SESSION['userName'])) {
    header('location:../models/login.php');
-};
+}
+;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,17 +16,20 @@ if (!isset($_SESSION['userName'])) {
 
 <body>
    <?php
-   include("view/header.php");
+   include ("view/header.php");
    if (isset($_GET['act'])) {
       switch ($_GET['act']) {
          case 'qltk':
-            include('view/listAcc.php');
+            include ('view/listAcc.php');
             break;
          case 'qlsp':
-            include("view/listProduct.php");
+            include ("view/listProduct.php");
             break;
          case 'qlbd':
-            include("view/upProduct.php");
+            include ("view/upProduct.php");
+            break;
+         case 'qltk2':
+            include ("view/listAcc2.php");
             break;
          case 'logout':
             session_start();
@@ -35,7 +39,7 @@ if (!isset($_SESSION['userName'])) {
             }
             break;
          default:
-            include('view/listAcc.php');
+            include ('view/listAcc.php');
             break;
       }
    } else {

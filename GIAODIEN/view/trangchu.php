@@ -34,10 +34,16 @@
             <button type="button" class="btn  btn-lg navbar-nav" data-toggle="modal" data-target="#modelId"
                 style="border: none;font-size: 16px; margin-left:25%; border:2px rgb(253, 253, 253) solid;margin-top:10px;">
                 <!-- <img src="/Img/User.png" style="width:22px;height:22px;margin-left:10px;" alt=""> -->
+                 <?php if(isset($_SESSION['username'])&&($_SESSION['username']!="")){
+                    echo ' <a href="login1.php"
+                    style="text-decoration: none;font-size:16px;font-weight: bold; color: rgb(10, 10, 10); margin-left:7px;">
+                   '.$_SESSION['username'].'</a>';
+                 }else{ ?>
                 <a href="login1.php"
                     style="text-decoration: none;font-size:16px;font-weight: bold; color: rgb(10, 10, 10); margin-left:7px;">
                     <img src="../../Img/User.png" style="width:22px;height:22px;margin-left:10px;" alt="">
                     Đăng nhập</a>
+                    <?php } ?>
             </button>
         </header>
         <!-- nav -->

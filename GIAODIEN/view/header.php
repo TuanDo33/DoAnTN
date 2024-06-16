@@ -44,7 +44,7 @@
         <nav class="nav n">
             <div class="navbar-nav navbar-expand-lg" style="margin-left: 14%;">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a href="#home">Trang chủ</a></li>
+                    <li class="nav-item"><a href="index.php?act=trangchu">Trang chủ</a></li>
                     <li class="nav-item"><a href="#home">TiVi</a></li>
                     <li class="nav-item"><a href="#home">Tủ Lạnh</a></li>
                     <li class="nav-item"><a href="#home">Máy Giặt</a></li>

@@ -84,7 +84,7 @@ if (!empty($_SESSION['email'])) {
                                     if ($_POST['txtpass'] == $row['password']) {
                                         $_SESSION['login'] = true;
                                         $_SESSION['id'] = $row['id'];
-                                        header('location:trangchu.php');
+                                        header('location:trangchu.html');
                                     }
                                 }
                             }

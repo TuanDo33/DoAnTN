@@ -23,32 +23,32 @@
         session_start();
         ob_start();
         include "view/header.php";
-           if(isset($_GET['act'])){
-        switch ($_GET['act']) {
-            // case "login";
-            // // include "view/login1.php";
-            // if(isset($_POST['txtsub'])&&($_POST['txtsub'])){
-            //     $username=$_POST['username'];
-            //     $password=$_POST['password'];
-            // // if (isset($_SESSION['userName'])) {
-            // //    header('location:..view/trangchu.html');
-            // // }else{
-            // header('location:view/trangchu.html');
-            // break;
-            // }
+        if (isset($_GET['act'])) {
+            switch ($_GET['act']) {
+                // case "login";
+                // // include "view/login1.php";
+                // if(isset($_POST['txtsub'])&&($_POST['txtsub'])){
+                //     $username=$_POST['username'];
+                //     $password=$_POST['password'];
+                // // if (isset($_SESSION['userName'])) {
+                // //    header('location:..view/trangchu.html');
+                // // }else{
+                // header('location:view/trangchu.html');
+                // break;
+                // }
                 case 'trangchu';
-                include "view/trangchu.html";
-                break;
-            //     case 'login';
-            //     include "view/login1.php";
-            //     break;
-            //    }
-            // }else{
-            //     include "view/trangchu.html";
+                    include "view/trangchu.html";
+                    break;
+                //     case 'login';
+                //     include "view/login1.php";
+                //     break;
+                //    }
+                // }else{
+                //     include "view/trangchu.html";
+            }
+        } else {
+
         }
-    }else{
-        
-    }
         include "view/footer.php";
         ?>
     </div>

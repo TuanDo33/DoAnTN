@@ -272,3 +272,63 @@ img {
   30% {margin-left: -640px;}
   50% {margin-left: -640px;}
 }
+/* danh sách */
+/* bộ lọc */
+.boloc{
+  display:inline-block;
+  width:60px;
+}
+/* .boloc a{
+  display: inline-block;
+  border: 1px solid #000;
+  border-radius:4px;
+} */
+.hãng1{
+display:none;
+position: absolute;
+width: 300px;
+height:auto;
+z-index:1;
+background-color: #ffff;
+margin-top:5px;
+border:1px solid #000;
+border-radius:7px;
+}
+.boloc:hover .hãng1{
+  display: block;
+}
+.brand{
+  width:auto;
+  height:40px;
+  text-decoration: none;
+  color: #000;
+  font-weight:600;
+}
+.btnbox a{
+  /* display:inline-flex; */
+  width: auto;
+  height:auto;
+  /* max-width: 98%; */
+  /* object-fit: contain; */
+  /* justify-content: center; */
+  margin-left:3%;
+}
+/* <!-- ---------Khoảng Giá---------- -- */
+.khgia_home p b {
+  font-size: 13px;
+}
+.khgia_home input {
+  width: 100%;
+}
+/* .boc_than_bl {
+  margin-top: 10px;
+  border-top: 1px solid #e9e9ed;
+} */
+.boc_than_bl p {
+  margin-top: 10px;
+  margin-left:3%;
+  /* font-weight: bold; */
+}
+#hs_bl {
+  width: 32%;
+}

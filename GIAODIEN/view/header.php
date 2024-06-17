@@ -15,14 +15,16 @@
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
     <div class="box">
-        <!-- haeder -->
-        <header class="header navbar navbar-expand">
+         <!-- haeder -->
+         <header class="header navbar navbar-expand">
             <a href="" class="navbar-brand text-white" style="margin-left:5%;">
-                <img src="../../Img/_3e0757bb-eae4-4033-bb53-4e6b11d61967.jpg" alt="" style="width:65px; height:65px;"></a>
+                <img src="../../Img/_3e0757bb-eae4-4033-bb53-4e6b11d61967.jpg" alt=""
+                    style="width:65px; height:65px;"></a>
             <div class="navbar-nav" style="margin-left:10%;">
                 <div class="box2" style="margin-bottom:30px;">
                     <div class="container-1">
@@ -34,9 +36,10 @@
             <button type="button" class="btn  btn-lg navbar-nav" data-toggle="modal" data-target="#modelId"
                 style="border: none;font-size: 16px; margin-left:25%; border:2px rgb(253, 253, 253) solid;margin-top:10px;">
                 <!-- <img src="/Img/User.png" style="width:22px;height:22px;margin-left:10px;" alt=""> -->
-                <a href="view/login1.php"
+                <a href="login1.php"
                     style="text-decoration: none;font-size:16px;font-weight: bold; color: rgb(10, 10, 10); margin-left:7px;">
-                    <img src="../../Img/User.png" style="width:22px;height:22px;margin-left:10px;" alt="">
+                    <!-- <img src="../../Img/User.png" style="width:22px;height:22px;margin-left:10px;" alt=""> -->
+                    <i class="fa-solid fa-user icon1"></i>
                     Đăng nhập</a>
             </button>
         </header>
@@ -44,7 +47,7 @@
         <nav class="nav n">
             <div class="navbar-nav navbar-expand-lg" style="margin-left: 14%;">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a href="index.php?act=trangchu">Trang chủ</a></li>
+                    <li class="nav-item"><a href="#home"><i class="fa-solid fa-house" style="font-size:18px;"></i></a></li>
                     <li class="nav-item"><a href="#home">TiVi</a></li>
                     <li class="nav-item"><a href="#home">Tủ Lạnh</a></li>
                     <li class="nav-item"><a href="#home">Máy Giặt</a></li>

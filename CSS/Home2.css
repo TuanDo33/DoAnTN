@@ -63,7 +63,7 @@
 }
 
 .lienhe:hover {
-  color: #f05626;
+  color: #000000;
 }
 
 .tieudefooter {
@@ -213,6 +213,7 @@ li.dropdown {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 250px;
   height: 320px;
+  max-height:400px;
   border-radius: 16px;
   position: relative;
 }
@@ -242,6 +243,22 @@ img {
 
 .card:hover {
   transform: scale(1.02);
+}
+.mua{
+  background-color:#f05626;
+   width:100px;
+   height:35px;
+   border-radius:7px;
+   border:none;
+} 
+.mua:hover{
+  border:2px solid #000;
+  color:#ffffff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.mua a{
+  text-decoration: none;
+  color: #000;
 }
 /*  */
 /* danh sách */
@@ -274,15 +291,15 @@ img {
 }
 /* danh sách */
 /* bộ lọc */
-.boloc{
+ .boloc{
   display:inline-block;
   width:60px;
-}
-/* .boloc a{
+} 
+ .boloc a{
   display: inline-block;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   border-radius:4px;
-} */
+} 
 .hãng1{
 display:none;
 position: absolute;
@@ -303,32 +320,40 @@ border-radius:7px;
   text-decoration: none;
   color: #000;
   font-weight:600;
-}
-.btnbox a{
-  /* display:inline-flex; */
-  width: auto;
-  height:auto;
-  /* max-width: 98%; */
-  /* object-fit: contain; */
-  /* justify-content: center; */
+} 
+ .btnbox a{
+   display:inline-flex;
+   width: auto;
+  height:auto; 
+   max-width: 98%;
+  object-fit: contain;
+   justify-content: center; 
   margin-left:3%;
-}
-/* <!-- ---------Khoảng Giá---------- -- */
-.khgia_home p b {
+} 
+/* khoảng giá */
+ .khgia_home p b {
   font-size: 13px;
 }
 .khgia_home input {
   width: 100%;
 }
-/* .boc_than_bl {
+ .boc_than_bl {
   margin-top: 10px;
-  border-top: 1px solid #e9e9ed;
-} */
+  /* border-top: 1px solid #e9e9ed; */
+} 
 .boc_than_bl p {
   margin-top: 10px;
   margin-left:3%;
-  /* font-weight: bold; */
+ font-weight: bold; 
 }
 #hs_bl {
   width: 32%;
+} 
+.nhapthongtin{
+  width:95%;border-color: white;border: none; height:20px;
+  margin-left:1%;
+}
+.nhapthongtin:focus{
+  border:none;
+  outline:none;
 }

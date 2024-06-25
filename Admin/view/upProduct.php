@@ -143,34 +143,6 @@
                         <input type="file" style="margin-left:25%;margin-top:25px;" name="txtfile" multiple="true">
                     </div>
 
-                    <!-- <div style="width:50%;margin-top:2%;margin-left:25%;">
-                        <div style="border:1px solid #5e5e5f;width:100%;height:40px;border-radius:4px;">
-                            <label style="height:7px;color: #A5A5A5;font-size:12px;margin-left:10px;">Hãng xe</label>
-                            <select style="width: 100%; margin-top:-2px;" class="nut2" name="txthangxe">
-                                <option value=""></option>
-                                <option value="Toyota" class="chọn">Toyota</option>
-                                <option value="Hyundai" class="chọn">Hyundai</option>
-                                <option value="KIA" class="chọn">KIA</option>
-                                <option value="VinFast" class="chọn">VinFast</option>
-                                <option value="Misubishi" class="chọn">Misubishi</option>
-                                <option value="BMW" class="chọn">BMW</option>
-                                <option value="Mercedes-Benz" class="chọn">Mercedes-Benz</option>
-                                <option value="Audi" class="chọn">Audi</option>
-                                <option value="Honda" class="chọn">Honda</option>
-                                <option value="Ford" class="chọn">Ford</option>
-                                <option value="Porsche" class="chọn">Porsche</option>
-                                <option value="Land Rover" class="chọn">Land Rover</option>
-                                <option value="Lexus" class="chọn">Lexus</option>
-                                <option value="Mazda" class="chọn">Mazda</option>
-                                <option value="Tesla" class="chọn">Tesla</option>
-                                <option value="Rolls-Royce" class="chọn">Rolls-Royce</option>
-                                <option value="Lamborghini" class="chọn">Lamborghini</option>
-                                <option value="Ferrari" class="chọn">Ferrari</option>
-                                <option value="Bentley" class="chọn">Bentley</option>
-
-                            </select>
-                        </div>
-                    </div> -->
                     <div style="width:50%;margin-top:1%;margin-left:25%;">
                         <div style="border:1px solid #5e5e5f;width:100%;height:40px;border-radius:4px;">
                             <label style="height:7px;color: #A5A5A5;font-size:12px;margin-left:10px;"> Dòng xe</label>
@@ -226,14 +198,7 @@
                         <label style="margin-left:1%;height:5px;font-size:12px;color: #A5A5A5">Số km đã đi(ODO) *</label>
                         <input type="text" class="nut2" name="txtsokmdi">
                     </div>
-                    <!-- <div  style="width:50%;margin-left:25%;margin-top:10px;">
-                <p>Hộp số</p>
-                <div class="tt_xe_bl ">
-                    <button id="hs_bl">Số sàn</button>
-                    <button id="hs_bl">Tự động</button>
-                    <button id="hs_bl">Bán tự động</button>
-                </div>
-            </div> -->
+                  
                     <div style="width:50%;margin-left:25%; margin-top: 1%;height:70px;">
                         <label for="" style="color: #A5A5A5;height:9px;">Hộp số</label>
                         <div class="radio_tile_group">
@@ -490,7 +455,7 @@
                 //  return;
                 //  }
                 // }
-                move_uploaded_file($_FILES['txtfile']['tmp_name'], 'img/dangtin/ ' . $_FILES['txtfile']['name']);
+                move_uploaded_file($_FILES['txtfile']['tmp_name'], '../Img/img_product/' . $_FILES['txtfile']['name']);
                 $insert = $get_data->dangtin_tt(
                     $_POST['txtbanxe'],
                     $_POST['txttinhtrang'],
@@ -528,54 +493,6 @@
             ?>
 
         </div>
-
-
-        <!-- Phần chân trang web
-        <div class="footer">
-            <div style="height:238px; width:400px;" class="contenfooter">
-                <div>
-                    <img src="img/logo_white_117_32.png" alt="" style="width:117px; height:32px; margin-top:20px;"></img>
-                </div>
-                <div style="width:400px; height:42px; color:white; margin-top:40px;">
-                    ©2022 by ChoXe.net. All rights reserved. Công Ty Cổ Phần Ô Tô Xuyên Việt; Mã số
-                    thuế: 0304013473
-                </div>
-                <div style="width:400px; height:42px; color:white; margin-top:40px;">
-                    Lầu 1, B5-B6 Khu Kim Sơn - Đường Nguyễn Hữu Thọ, phường Tân Phong, Quận 7, TPHCM
-                </div>
-                <div style="height:18px; width:247px;margin-top:40px; display:inline-flex;">
-                    <i class="fa-solid fa-phone" style="color:white; font-size:14px;"><a href="" class="phone">091.144.2883</a></i>
-                    <i class="fa-solid fa-envelope" style="color:white; margin-left:60px; font-size:14px;"><a href="" class="email">cskh@choxe.vn</a></i>
-                </div>
-                <div>
-                    <img src="img/logo-bct.png" alt="" style="height:45px;width:122px; margin-top:50px;"></img>
-                </div>
-            </div>
-            <div style="margin-left:565px; width:180px; height:220px; margin-top:-140px;">
-                <a href="" class="footerlink">Giới thiệu</a>
-                <a href="" class="footerlink">Quy chế hoạt động</a>
-                <a href="" class="footerlink">Báo giá</a>
-            </div>
-             <div style="  margin-left:900px; margin-top:-150px;">
-                    <div class="phones"><i class="fa-solid fa-phone" style="color:#F05626; font-size:17px;"><a href="" class="hotline">Hotline: 091.144.2883</a></i></div>
-                    <div class="salons"><i class="fa-sharp fa-solid fa-store" style="color:white; font-size:17px;"><a href="" class="salon">Dành cho Salon, Môi giới</a></i></div>
-                </div> 
-            <div class="footer-content-right">
-                <div class="footer-content-right-1">
-                    <a href=""><img src="img/hotline2.png"></a>
-                    <div class="footer-content-right-1_1">
-                        <a href=""><b>Hotline: 091.144.2883</b></a>
-                    </div>
-                </div>
-                <div class="footer-content-right-2">
-                    <a href=""><img src="img/danhchomoigioi.png"></a>
-                    <div class="footer-content-right-2_1">
-                        <a href=""><b>Dành cho salon, Môi giới</b></a>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
 
 
 

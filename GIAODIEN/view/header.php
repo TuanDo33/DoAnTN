@@ -23,7 +23,7 @@
          <!-- haeder -->
          <header class="header navbar navbar-expand">
             <a href="" class="navbar-brand text-white" style="margin-left:5%;">
-                <img src="../../Img/_3e0757bb-eae4-4033-bb53-4e6b11d61967.jpg" alt=""
+                <img src="../Img/_3e0757bb-eae4-4033-bb53-4e6b11d61967.jpg" alt=""
                     style="width:65px; height:65px;"></a>
             <div class="navbar-nav" style="margin-left:10%;">
                 <div class="box2" style="margin-bottom:30px;">

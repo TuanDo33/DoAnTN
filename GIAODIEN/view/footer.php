@@ -27,10 +27,10 @@
                     <div>
                         <div>
                             <a href="" class="navbar-brand text-white">
-                                <img src="../../Img/_3e0757bb-eae4-4033-bb53-4e6b11d61967.jpg" alt=""
+                                <img src="../Img/_3e0757bb-eae4-4033-bb53-4e6b11d61967.jpg" alt=""
                                     style="width:65px; height:65px; margin-top: 2%;"></a>
                         </div>
-                        <img src="../../Img/logo-bct.png" alt="" style="width:150px; height:55px;margin-top:15%;">
+                        <img src="../Img/logo-bct.png" alt="" style="width:150px; height:55px;margin-top:15%;">
                     </div>
                 </div>
                 <div class="col" style="margin-top:2%;">

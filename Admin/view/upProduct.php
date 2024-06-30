@@ -142,7 +142,33 @@
                 </span> -->
                         <input type="file" style="margin-left:25%;margin-top:25px;" name="txtfile" multiple="true">
                     </div>
+                    <div style="width:50%;margin-top:2%;margin-left:25%;">
+                        <div style="border:1px solid #5e5e5f;width:100%;height:40px;border-radius:4px;">
+                            <label style="height:7px;color: #A5A5A5;font-size:12px;margin-left:10px;">Hãng xe</label>
+                            <select style="width: 100%; margin-top:-2px;" class="nut2" name="txthangxe">
+                                <option value="Toyota" class="chọn">Toyota</option>
+                                <option value="Hyundai" class="chọn">Hyundai</option>
+                                <option value="KIA" class="chọn">KIA</option>
+                                <option value="VinFast" class="chọn">VinFast</option>
+                                <option value="Misubishi" class="chọn">Misubishi</option>
+                                <option value="BMW" class="chọn">BMW</option>
+                                <option value="Mercedes-Benz" class="chọn">Mercedes-Benz</option>
+                                <option value="Audi" class="chọn">Audi</option>
+                                <option value="Honda" class="chọn">Honda</option>
+                                <option value="Ford" class="chọn">Ford</option>
+                                <option value="Porsche" class="chọn">Porsche</option>
+                                <option value="Land Rover" class="chọn">Land Rover</option>
+                                <option value="Lexus" class="chọn">Lexus</option>
+                                <option value="Mazda" class="chọn">Mazda</option>
+                                <option value="Tesla" class="chọn">Tesla</option>
+                                <option value="Rolls-Royce" class="chọn">Rolls-Royce</option>
+                                <option value="Lamborghini" class="chọn">Lamborghini</option>
+                                <option value="Ferrari" class="chọn">Ferrari</option>
+                                <option value="Bentley" class="chọn">Bentley</option>
 
+                            </select>
+                        </div>
+                    </div>
                     <div style="width:50%;margin-top:1%;margin-left:25%;">
                         <div style="border:1px solid #5e5e5f;width:100%;height:40px;border-radius:4px;">
                             <label style="height:7px;color: #A5A5A5;font-size:12px;margin-left:10px;"> Dòng xe</label>

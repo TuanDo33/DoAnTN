@@ -47,7 +47,7 @@
         <nav class="nav n">
             <div class="navbar-nav navbar-expand-lg" style="margin-left: 14%;">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a href="#home"><i class="fa-solid fa-house" style="font-size:18px;"></i></a></li>
+                    <li class="nav-item"><a href="trangchu.html"><i class="fa-solid fa-house" style="font-size:18px;"></i></a></li>
                     <li class="nav-item"><a href="#home">TiVi</a></li>
                     <li class="nav-item"><a href="#home">Tủ Lạnh</a></li>
                     <li class="nav-item"><a href="#home">Máy Giặt</a></li>
@@ -152,9 +152,39 @@
                 <div>
                     <p style="font-size:30px;font-weight:500;">Danh sách sản phẩm</p>
                 </div>
+                <?php include '../view/connect2.php';
+                $item_per_page = !empty($_GET['per_page'])?$_GET['per_page']:8;
+                $current_page = !empty($_GET['page'])?$_GET['page']:1; // trang hiện tại
+                $offset = ($current_page -1) * $item_per_page;
+                $product = mysqli_query($conn, "SELECT * FROM dangtin ORDER BY 'id' ASC limit ".$item_per_page." offset ".$offset." ");
+                $totalRecords = mysqli_query($conn, "Select * from dangtin");
+                $totalRecords = $totalRecords->num_rows;
+                $totalPages = ceil($totalRecords / $item_per_page);
+                
+                ?>
                 <div>
                     <div class="row gx-0" style="margin-left:4%;">
-                        <div class="col-sm-3">
+                        <?php while ($row = mysqli_fetch_array($product))
+                        {?>
+                        <div class="col-sm-3" style="margin-top:2%;">
+                            <div class="card">
+                                <img src="../../Img/img_product/<?=$row['anh']?>" alt="image">
+                                <div class="content">
+                                    <div class="title">What is Lorem Ipsum?</div>
+                                    <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </div>
+                                    <div class="favorite">
+                                        <i class="ri-heart-fill"></i>
+                                        <span>3</span>
+                                    </div>
+                                    <div>
+                                        <button class="mua"><a href="../user/giohang.html">mua ngay</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <?php }?>
+                        <!-- <div class="col-sm-3">
                             <div class="card">
                                 <img src="../../Img/63d4c026c181357e6c08ada62db59b8b.jpg" alt="image">
                                 <div class="content">
@@ -204,26 +234,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="card">
-                                <img src="../../Img/63d4c026c181357e6c08ada62db59b8b.jpg" alt="image">
-                                <div class="content">
-                                    <div class="title">What is Lorem Ipsum?</div>
-                                    <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </div>
-                                    <div class="favorite">
-                                        <i class="ri-heart-fill"></i>
-                                        <span>3</span>
-                                    </div>
-                                    <div>
-                                        <button class="mua"><a href="../user/giohang.html">mua ngay</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="row gx-0" style="margin-left:4%;margin-top:3%;">
+                    <!-- <div class="row gx-0" style="margin-left:4%;margin-top:3%;">
                         <div class="col-sm-3">
                             <div class="card">
                                 <img src="../../Img/63d4c026c181357e6c08ada62db59b8b.jpg" alt="image">
@@ -292,8 +305,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row gx-0" style="margin-left:4%;margin-top:3%;">
+                    </div> -->
+                    <!-- <div class="row gx-0" style="margin-left:4%;margin-top:3%;">
                         <div class="col-sm-3">
                             <div class="card">
                                 <img src="../../Img/63d4c026c181357e6c08ada62db59b8b.jpg" alt="image">
@@ -362,24 +375,52 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>  
+                <!-- Chuyển trang "phân trang" -->
                 <div style="margin-top:4%;margin-left:43%;">
                     <nav aria-label="Page navigation example">
                         <ul class="pagination">
-                            <li class="page-item">
+                            <!-- <li class="page-item">
                                 <a class="page-link" href="#" aria-label="Previous">
                                     <span aria-hidden="true">&laquo;</span>
                                 </a>
+                            </li> -->
+                            <?php 
+                            if ($current_page > 3){
+                                $first_page = 1;
+                            ?> <li class="page-item"><a class="page-link" href="?per_page=<?=$item_per_page?>&page=<?=$first_page?>">First</a></li>
+                                <?php }
+                                if ($current_page > 1) {
+                                    $prew_page =$current_page -1;
+                                ?>
+                                <li class="page-item">
+                                <a class="page-link" href="?per_page=<?=$item_per_page?>&page=<?=$prew_page?>" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
                             </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
+                            <?php }?>
+                                <!--  -->
+                            <?php for ($num = 1; $num <= $totalPages; $num++){?>
+                                <?php if ($num != $current_page) {?>
+                            <li class="page-item"><a class="page-link" href="?per_page=<?=$item_per_page?>&page=<?=$num?>"><?=$num?></a></li>
+                            <!-- <li class="page-item"><a class="page-link" href="?per_page=4&page=2">2</a></li>
+                            <li class="page-item"><a class="page-link" href="?per_page=4&page=3">3</a></li> -->
+                            <?php } else {?>
+                                <strong class="page-link" style="background-color:#f05626;"><?=$num?></strong>
+                                <?php }?>
+                            <?php }?>
+                            <!--  -->
+                            <?php 
+                            if ($current_page < $totalPages - 3){
+                                $end_page = $totalPages;
+                            ?> <li class="page-item"><a class="page-link" href="?per_page=<?=$item_per_page?>&page=<?=$end_page_page?>">Last</a></li>
+                                <?php }?>
+                            <!-- <li class="page-item">
                                 <a class="page-link" href="#" aria-label="Next">
                                     <span aria-hidden="true">&raquo;</span>
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </nav>
                 </div>

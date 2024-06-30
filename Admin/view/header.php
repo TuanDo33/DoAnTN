@@ -13,7 +13,7 @@
 </div>
 <div class="select_option_admin">
    <nav class="navbar navbar-expand-lg ">
-      <a class="navbar-brand">ADMIN</a>
+      <a class="navbar-brand" style="font-weight:600;">ADMIN</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>

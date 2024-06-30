@@ -357,3 +357,6 @@ border-radius:7px;
   border:none;
   outline:none;
 }
+.thuonghieu:hover{
+  transform: scale(1.02);
+}

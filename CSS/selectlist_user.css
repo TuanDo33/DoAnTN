@@ -1,0 +1,35 @@
+
+.list_about:hover{
+    color:#f05626;
+}
+.left_content li{
+    width:270px;
+    height:60px;
+}
+.left_content li:hover{
+    /* background-color:#e9b6a6;  */
+    background: rgba(226, 191, 168, 0.3);
+    border-radius:10px;
+}
+.doimatkhau{
+    width:700px;
+    height:45px;
+    margin-top:3%;
+    border-radius:5px;
+    border:1px solid #5a5a5a;
+    padding:10px;
+}
+.doimatkhau:hover, 
+.doimatkhau:focus,
+.doimatkhau:active{
+    outline: none;
+}
+.capnhat{
+    width:700px;
+    height:45px;
+    background-color: #f05626;
+    margin-top:3%;
+    border-radius:5px;
+    border: none;
+    color:#ffff;
+}

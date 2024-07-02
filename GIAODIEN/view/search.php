@@ -19,42 +19,58 @@
 </head>
 
 <body>
+    <?php include('connect2.php');
+    if(isset($_GET["search"]) && !empty(($_GET["search"]))){
+        $key = $_GET["search"];
+        $sql = "SELECT * FROM dangtin Where id LIKE '%$key%' OR hangxe LIKE '%$key%' OR tinhtrang LIKE '%$key%' OR tieude LIKE '%$key%'";
+    }else{
+        $sql = "SELECT * FROM dangtin";
+    }
+    $result = mysqli_query($conn, $sql);
+    ?>
     <div class="box">
-         <!-- haeder -->
-          <?php include('header.php');?>
-         <!-- <header class="header navbar navbar-expand">
-            <a href="" class="navbar-brand text-white" style="margin-left:5%;">
+          <!-- haeder -->
+        <header class="header navbar navbar-expand">
+            <a href="../view/trangchu.html" class="navbar-brand text-white" style="margin-left:5%;">
                 <img src="../../Img/_3e0757bb-eae4-4033-bb53-4e6b11d61967.jpg" alt=""
                     style="width:65px; height:65px;"></a>
             <div class="navbar-nav" style="margin-left:10%;">
+                <!--  -->
+                <form action="" method="get">
                 <div class="box2" style="margin-bottom:30px;">
                     <div class="container-1">
-                        <span class="icon"><i class="fa fa-search"></i></span>
-                        <input type="search" id="search" placeholder="Search..." />
+                        <span class="icon"><i class="fa fa-search" style="font-size:22px;"></i></span>
+                        <input type="search" id="search" placeholder="Search..." name="search" value="<?php if(isset($_GET["search"])) { echo $_GET["search"];}?>"/>
                     </div>
+                    <!-- <input type="submit" value="tìm">
+                    <input type="button" value="tất cả" onclick="window.locatin.herf = 'search.php'"> -->
                 </div>
+                </form>
             </div>
             <button type="button" class="btn  btn-lg navbar-nav" data-toggle="modal" data-target="#modelId"
-                style="border: none;font-size: 16px; margin-left:25%; border:2px rgb(253, 253, 253) solid;margin-top:10px;"> -->
+                style="border: none;font-size: 16px; margin-left:25%; border:2px rgb(253, 253, 253) solid;margin-top:10px;">
                 <!-- <img src="/Img/User.png" style="width:22px;height:22px;margin-left:10px;" alt=""> -->
-                <!-- <a href="login1.php"
-                    style="text-decoration: none;font-size:16px;font-weight: bold; color: rgb(10, 10, 10); margin-left:7px;"> -->
+                <a href="login1.php"
+                    style="text-decoration: none;font-size:16px;font-weight: bold; color: rgb(10, 10, 10); margin-left:7px;">
                     <!-- <img src="../../Img/User.png" style="width:22px;height:22px;margin-left:10px;" alt=""> -->
-                    <!-- <i class="fa-solid fa-user icon1"></i>
+                    <i class="fa-solid fa-user icon1"></i>
                     Đăng nhập</a>
             </button>
-        </header> -->
+            <div style="margin-left:4%;margin-top:1%;">
+                <a href="../user/giohang.html"><i class="fa-solid fa-cart-shopping" style="font-size:28px;color:#ffff;"></i></a>
+            </div>
+        </header>
         <!-- nav -->
-        <!-- <nav class="nav n">
+        <nav class="nav n">
             <div class="navbar-nav navbar-expand-lg" style="margin-left: 14%;">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a href="trangchu.html"><i class="fa-solid fa-house" style="font-size:18px;"></i></a></li>
+                    <li class="nav-item"><a href="../view/trangchu.html"><i class="fa-solid fa-house" style="font-size:18px;"></i></a></li>
                     <li class="nav-item"><a href="#home">TiVi</a></li>
                     <li class="nav-item"><a href="#home">Tủ Lạnh</a></li>
                     <li class="nav-item"><a href="#home">Máy Giặt</a></li>
                     <li class="nav-item"><a href="#home">Điều Hòa</a></li>
                     <li class="nav-item"><a href="#home">Gia Dụng</a></li>
-                    <li class="nav-item"><a href="#home">Điện Thoại</a></li> -->
+                    <li class="nav-item"><a href="#home">Điện Thoại</a></li>
                     <!-- <li><a href="#news">Chia sẻ</a></li>  -->
                     <!-- <li class="nav-item dropdown">
                         <a class="dropbtn ">Học tập</a>
@@ -64,7 +80,7 @@
                             <a class="dropdown-item" href="#">Javascript</a>
                         </ul>
                     </li> -->
-                    <!-- <li class="dropdown">
+                    <li class="dropdown">
                         <a class="dropbtn dropdown-toggle">Danh sách sản phẩm</a>
                         <div class="dropdown-content">
                             <a href="#">TiVi</a>
@@ -77,7 +93,7 @@
                     </li>
                 </ul>
             </div>
-        </nav> -->
+        </nav>
         <main class="main">
             <div style="margin-right:5%; margin-left:5%;">
                 <div style="margin-bottom:2%;">
@@ -153,6 +169,8 @@
                 <div>
                     <p style="font-size:30px;font-weight:500;">Danh sách sản phẩm</p>
                 </div>
+                
+                <div>
                 <?php include '../view/connect2.php';
                 $item_per_page = !empty($_GET['per_page'])?$_GET['per_page']:8;
                 $current_page = !empty($_GET['page'])?$_GET['page']:1; // trang hiện tại
@@ -161,12 +179,13 @@
                 $totalRecords = mysqli_query($conn, "Select * from dangtin");
                 $totalRecords = $totalRecords->num_rows;
                 $totalPages = ceil($totalRecords / $item_per_page);
-                
                 ?>
-                <div>
+                
                     <div class="row gx-0" style="margin-left:4%;">
-                        <?php while ($row = mysqli_fetch_array($product))
-                        {?>
+                   <?php while($row = mysqli_fetch_assoc($result)){
+                    // $anh = $row["anh"];
+                    // $ten = $row["hangxe"];
+                    ?>
                         <div class="col-sm-3" style="margin-top:2%;">
                             <div class="card">
                                 <img src="../../Img/img_product/<?=$row['anh']?>" alt="image">
@@ -176,7 +195,7 @@
                                     </div>
                                     <div class="favorite">
                                         <i class="ri-heart-fill"></i>
-                                        <span style="color:#B90219;font-weight: 600;"><?=$row['giaban']?>.Đ</span>
+                                        <span>3</span>
                                     </div>
                                     <div>
                                         <button class="mua"><a href="../user/giohang.html">mua ngay</a></button>
@@ -184,7 +203,8 @@
                                 </div>
                             </div>
                         </div>
-                        <?php }?>
+                       <?php }?>
+                       <?php mysqli_close($conn);?>
                         <!-- <div class="col-sm-3">
                             <div class="card">
                                 <img src="../../Img/63d4c026c181357e6c08ada62db59b8b.jpg" alt="image">
@@ -381,7 +401,7 @@
                 <!-- Chuyển trang "phân trang" -->
                 <div style="margin-top:4%;margin-left:43%;">
                     <nav aria-label="Page navigation example">
-                        <ul class="pagination">
+                    <ul class="pagination">
                             <!-- <li class="page-item">
                                 <a class="page-link" href="#" aria-label="Previous">
                                     <span aria-hidden="true">&laquo;</span>

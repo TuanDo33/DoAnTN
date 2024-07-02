@@ -26,12 +26,20 @@
                 <img src="../../Img/_3e0757bb-eae4-4033-bb53-4e6b11d61967.jpg" alt=""
                     style="width:65px; height:65px;"></a>
             <div class="navbar-nav" style="margin-left:10%;">
+            <form method="GET">
                 <div class="box2" style="margin-bottom:30px;">
                     <div class="container-1">
                         <span class="icon"><i class="fa fa-search" style="font-size:22px;"></i></span>
-                        <input type="search" id="search" placeholder="Search..." />
+                        <input type="search" id="search" placeholder="Search..." name="txtsearch"/>
                     </div>
                 </div>
+                <?php
+                                    if(isset($_GET['a'])){
+                                        header("Location:search.php?name=".$_GET['txtsearch']);
+                                        exit;
+                                    }
+                                    ?>
+            </form>
             </div>
             <button type="button" class="btn  btn-lg navbar-nav" data-toggle="modal" data-target="#modelId"
                 style="border: none;font-size: 16px; margin-left:25%; border:2px rgb(253, 253, 253) solid;margin-top:10px;">
@@ -150,7 +158,7 @@
                     <div class="container">
                         <div class="row  gx-0">
                             <div class="col-1">
-                                <h3 style="display:inline-block; width:100%;">
+                                <h3 style="display:inline-block; width:100%;text-align: center;">
                                     <a href="" style="text-decoration: none;">
                                         <div><img src="../../Img//img đồ án/Tivi-128x129.png" alt=""
                                                 style="width:55px; height:55px;"></img></div>
@@ -159,7 +167,7 @@
                                 </h3>
                             </div>
                             <div class="col-1">
-                                <h3 style="display:inline-block; width:100%;">
+                                <h3 style="display:inline-block; width:100%;text-align: center">
                                     <a href="" style="text-decoration: none;">
                                         <div><img src="../../Img/img đồ án/64x64--3--128x128.png" alt=""
                                                 style="width:55px; height:55px;"></img></div>
@@ -168,7 +176,7 @@
                                 </h3>
                             </div>
                             <div class="col-1">
-                                <h3 style="display:inline-block; width:100%;">
+                                <h3 style="display:inline-block; width:100%;text-align: center">
                                     <a href="" style="text-decoration: none;">
                                         <div><img src="../../Img//img đồ án/Bepbeptu-128x129.png" alt=""
                                                 style="width:55px; height:55px;"></img></div>
@@ -177,7 +185,7 @@
                                 </h3>
                             </div>
                             <div class="col-1">
-                                <h3 style="display:inline-block; width:100%;">
+                                <h3 style="display:inline-block; width:100%;text-align: center">
                                     <a href="" style="text-decoration: none;">
                                         <div><img src="../../Img/img đồ án/Diengiadung-128x129.png" alt=""
                                                 style="width:55px; height:55px;"></img></div>
@@ -186,7 +194,7 @@
                                 </h3>
                             </div>
                             <div class="col-1">
-                                <h3 style="display:inline-block; width:100%;">
+                                <h3 style="display:inline-block; width:100%;text-align: center">
                                     <a href="" style="text-decoration: none;">
                                         <div><img src="../../Img//img đồ án/Dungcu2X-128x129-1.png" alt=""
                                                 style="width:55px; height:55px;"></img></div>
@@ -195,7 +203,7 @@
                                 </h3>
                             </div>
                             <div class="col-1">
-                                <h3 style="display:inline-block; width:100%;">
+                                <h3 style="display:inline-block; width:100%;text-align: center">
                                     <a href="" style="text-decoration: none;">
                                         <div><img src="../../Img/img đồ án/Group-46570-128x128.png" alt=""
                                                 style="width:55px; height:55px;"></img></div>
@@ -204,97 +212,89 @@
                                 </h3>
                             </div>
                             <div class="col-1">
-                                <h3 style="display:inline-block; width:100%;">
+                                <h3 style="display:inline-block; width:100%;text-align: center">
                                     <a href="" style="text-decoration: none;">
                                         <div><img src="../../Img//img đồ án/Group-46572-128x128.png" alt=""
                                                 style="width:55px; height:55px;"></img></div>
-                                        <span style="margin-left:15px;">TiVi</span>
+                                        <span style="margin-left:15px;">nồi</span>
                                     </a>
                                 </h3>
                             </div>
                             <div class="col-1">
-                                <h3 style="display:inline-block; width:100%;">
+                                <h3 style="display:inline-block; width:100%;text-align: center">
                                     <a href="" style="text-decoration: none;">
                                         <div><img src="../../Img/img đồ án/Group-46573-128x128.png" alt=""
                                                 style="width:55px; height:55px;"></img></div>
-                                        <span style="margin-left:15px;">TiVi</span>
+                                        <span style="margin-left:15px;">máy hút bụi</span>
                                     </a>
                                 </h3>
                             </div>
                             <div class="col-1">
-                                <h3 style="display:inline-block; width:100%;">
+                                <h3 style="display:inline-block; width:100%;text-align: center">
                                     <a href="" style="text-decoration: none;">
                                         <div><img src="../../Img//img đồ án/Laptop-129x129-1.png" alt=""
                                                 style="width:55px; height:55px;"></img></div>
-                                        <span style="margin-left:15px;">TiVi</span>
+                                        <span style="margin-left:15px;">Laptop</span>
                                     </a>
                                 </h3>
                             </div>
                             <div class="col-1">
-                                <h3 style="display:inline-block; width:100%;">
+                                <h3 style="display:inline-block; width:100%;text-align: center">
                                     <a href="" style="text-decoration: none;">
                                         <div><img src="../../Img/img đồ án/loa-128x129.png" alt=""
                                                 style="width:55px; height:55px;"></img></div>
-                                        <span style="margin-left:15px;">TiVi</span>
+                                        <span style="margin-left:15px;">Loa</span>
                                     </a>
                                 </h3>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row gx-0">
                             <div class="col-1">
-                                <h3 style="display:inline-block; width:100%;">
+                                <h3 style="display:inline-block; width:100%;text-align: center">
                                     <a href="" style="text-decoration: none;">
                                         <div><img src="../../Img//img đồ án/lovisong-65x64.png" alt=""
                                                 style="width:55px; height:55px;"></img></div>
-                                        <span style="margin-left:15px;">TiVi</span>
+                                        <span style="margin-left:15px;">lò vi sóng</span>
                                     </a>
                                 </h3>
                             </div>
                             <div class="col-1">
-                                <h3 style="display:inline-block; width:100%;">
+                                <h3 style="display:inline-block; width:100%;text-align: center">
                                     <a href="" style="text-decoration: none;">
                                         <div><img src="../../Img/img đồ án/Maygiat-128x129.png" alt=""
                                                 style="width:55px; height:55px;"></img></div>
-                                        <span style="margin-left:15px;">TiVi</span>
+                                        <span style="margin-left:15px;">Máy giặt</span>
                                     </a>
                                 </h3>
                             </div>
                             <div class="col-1">
-                                <h3 style="display:inline-block; width:100%;">
+                                <h3 style="display:inline-block; width:100%;text-align: center">
                                     <a href="" style="text-decoration: none;">
                                         <div><img src="../../Img//img đồ án/Maylanh-128x129-128x129-1.png" alt=""
                                                 style="width:55px; height:55px;"></img></div>
-                                        <span style="margin-left:15px;">TiVi</span>
+                                        <span style="margin-left:15px;">Điều hòa</span>
                                     </a>
                                 </h3>
                             </div>
                             <div class="col-1">
-                                <h3 style="display:inline-block; width:100%;">
+                                <h3 style="display:inline-block; width:100%;text-align: center">
                                     <a href="" style="text-decoration: none;">
                                         <div><img src="../../Img/img đồ án/Tulanh-128x129.png" alt=""
                                                 style="width:55px; height:55px;"></img></div>
-                                        <span style="margin-left:15px;">TiVi</span>
+                                        <span style="margin-left:15px;">tủ lạnh</span>
                                     </a>
                                 </h3>
                             </div>
                             <div class="col-1">
-                                <h3 style="display:inline-block; width:100%;">
+                                <h3 style="display:inline-block; width:100%;text-align: center">
                                     <a href="" style="text-decoration: none;">
                                         <div><img src="../../Img//img đồ án/quatdieuhoa-128x129.png" alt=""
                                                 style="width:55px; height:55px;"></img></div>
-                                        <span style="margin-left:15px;">TiVi</span>
+                                        <span style="margin-left:15px;">quạt</span>
                                     </a>
                                 </h3>
                             </div>
-                            <div class="col-1">
-                                <h3 style="display:inline-block; width:100%;">
-                                    <a href="" style="text-decoration: none;">
-                                        <div><img src="../../Img/img đồ án/RACMENU-280x280.png" alt=""
-                                                style="width:55px; height:55px;"></img></div>
-                                        <span style="margin-left:15px;">TiVi</span>
-                                    </a>
-                                </h3>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -482,7 +482,7 @@
 
                 </div>
                 <div style="height: 24px;text-align: center;margin-top:35px;">
-                    <a href="../view/danhsach.html" style="color:#eb5555; text-decoration:none;text-align: center;font-size:20px;">Xem thêm
+                    <a href="danhsach.php" style="color:#eb5555; text-decoration:none;text-align: center;font-size:20px;">Xem thêm
                         &gt;&gt;</a>
                 </div>
                 <!--  -->

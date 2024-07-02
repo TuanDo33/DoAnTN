@@ -21,6 +21,10 @@
             <div class="container">
                 <div class="form_area">
                     <div style="margin-top:10%;margin-bottom:10%;">
+                        <div >
+                            <img src="../../Img/_3e0757bb-eae4-4033-bb53-4e6b11d61967.jpg" alt=""
+                                style="width:70px;height:70px;">
+                        </div>
                         <p class="title">SIGN UP</p>
                         <form action="">
                             <div class="form_group">
@@ -28,6 +32,11 @@
                                 <input type="text" class="form_style row" placeholder="Your Username "
                                     name="txtusername" />
                             </div>
+                            <!-- <div class="form_group">
+                                <label class="sub_title row" for="password">FullName</label>
+                                <input type="text" class="form_style row" placeholder="Your FullName"
+                                    name="txtfullname" />
+                            </div> -->
                             <div class="form_group">
                                 <label class="sub_title row" for="email">Email</label>
                                 <input type="email" class="form_style row" placeholder="Your Email " name="txtemail" />
@@ -44,7 +53,7 @@
                                 <p style="margin-top:3%;">Have an Account? <a class="link" href="login1.php">Login
                                         Herel</a></p><a class="link" href="">
                                 </a>
-                            </div><a class="link" href="trangchu.html" >Home
+                            </div><a class="link" href="trangchu.html">Home
                             </a>
                         </form>
                     </div>

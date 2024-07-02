@@ -19,18 +19,27 @@
 </head>
 
 <body>
+<?php include('connect2.php');
+    if(isset($_GET["search"]) && !empty(($_GET["search"]))){
+        $key = $_GET["search"];
+        $sql = "SELECT * FROM dangtin Where id LIKE '%$key%' OR hangxe LIKE '%$key%' OR tinhtrang LIKE '%$key%'";
+    }else{
+        $sql = "SELECT * FROM dangtin";
+    } 
+    $result = mysqli_query($conn, $sql);
+    ?>
     <div class="box">
-       <!-- footer -->
-       <footer class="footer">
+      <!-- footer -->
+      <footer class="footer">
             <div class="row gx-0" style="width:1300px;">
                 <div class="col" style="margin-top:1%;margin-left:10%;">
                     <div>
                         <div>
                             <a href="" class="navbar-brand text-white">
-                                <img src="../Img/_3e0757bb-eae4-4033-bb53-4e6b11d61967.jpg" alt=""
+                                <img src="../../Img/_3e0757bb-eae4-4033-bb53-4e6b11d61967.jpg" alt=""
                                     style="width:65px; height:65px; margin-top: 2%;"></a>
                         </div>
-                        <img src="../Img/logo-bct.png" alt="" style="width:150px; height:55px;margin-top:15%;">
+                        <img src="../../Img/logo-bct.png" alt="" style="width:150px; height:55px;margin-top:15%;">
                     </div>
                 </div>
                 <div class="col" style="margin-top:2%;">
@@ -53,7 +62,7 @@
                 <div class="col" style="margin-top:2%;">
                     <div class="thongtin">
                         <p class="tieudefooter">Liên hệ & Địa chỉ</p>
-                        <p class="lienhe">Hotline:0376017025</p>
+                        <p class="lienhe"><a href="tel:+0376017025" style="text-decoration: none;">Hotline:0376017025</a></p>
                         <p class="lienhe">Email:Tstore@gmail.com</p>
                         <p>Địa chỉ:446 phù lưu tế mỹ đức hà nội</p>
                         <div>
@@ -61,13 +70,13 @@
                                 <i class="fa-brands fa-facebook" style="font-size:35px;"></i>
                             </a>
                             <a href="https://www.messenger.com/" target="_blank">
-                                <i class="fa-brands fa-facebook-messenger" style="font-size:35px;"></i>
+                                <i class="fa-brands fa-facebook-messenger" style="font-size:35px;margin-left:2%;"></i>
                             </a>
                             <a href="https://www.instagram.com/" target="_blank">
-                                <i class="fa-brands fa-instagram" style="font-size:35px;"></i>
+                                <i class="fa-brands fa-instagram" style="font-size:35px;margin-left:2%;"></i>
                             </a>
                             <a href="https://www.youtube.com/" target="_blank">
-                                <i class="fa-brands fa-youtube" style="font-size:35px;"></i>
+                                <i class="fa-brands fa-youtube" style="font-size:35px;margin-left:2%;"></i>
                             </a>
                         </div>
                     </div>

@@ -6,6 +6,7 @@ ob_start();
 // }
 ?>
 <link rel="stylesheet" href="../CSS/ls_style.css">
+<link rel="icon" href="../Img/_3e0757bb-eae4-4033-bb53-4e6b11d61967.jpg" type="image/x-icon">
 <div class=login_padding>
    <form action="login.php" method="post" class="login-table">
       <div class="UP">

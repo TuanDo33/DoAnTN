@@ -25,6 +25,9 @@ if (!empty($_SESSION['email'])) {
             <div class="login">
                 <div style="margin-top:10%;margin-bottom:10%;">
                     <form role="form" method="post" >
+                        <div style="margin-left:40%;">
+                            <img src="../../Img/_3e0757bb-eae4-4033-bb53-4e6b11d61967.jpg" alt="" style="width:70px;height:70px;">
+                        </div>
                         <p style="font-size:40px;margin-left:35%;margin-top:3%;color: #264143;font-weight: 800;">
                             Login</p>
                         <div style="margin-left:14%;margin-top:7%;">
@@ -67,29 +70,29 @@ if (!empty($_SESSION['email'])) {
                     <p class="col" style="margin-left:-13%;"><a href=""
                             style="text-decoration: none;color: #e4c82a;">Đăng ký</a></p>
                 </div> -->
-                        <?php
-                        include ('control_user.php');
-                        if (isset($_POST['txtsub'])) {
-                            $getdata = new data();
-                            $contact = $getdata->select_pass(
-                                $_POST['txtusername'],
-                                $_POST['txtpass']
-                            );
-                            $row = mysqli_fetch_assoc($contact); //sẽ tìm và trả về một dòng kết quả của một truy vấn MySQL nào đó dưới dạng một mảng kết hợp.
-                            if (empty($_POST['txtusername']) || empty($_POST['txtpass'])) {
-                                echo '<script>alert("Bạn chưa nhập mật khẩu or tên tài khoản")</script>';
-                            } else {
-                                // echo json_encode($row);
-                                if (mysqli_num_rows($contact) > 0) { //Một int đại diện cho số hàng được tìm nạp. Trả về 0ở chế độ không có bộ đệm trừ khi tất cả các hàng đã được tìm nạp từ máy chủ.
-                                    if ($_POST['txtpass'] == $row['password']) {
-                                        $_SESSION['login'] = true;
-                                        $_SESSION['id'] = $row['id'];
-                                        header('location:trangchu.html');
-                                    }
-                                }
-                            }
-                        }
-                        ?>
+                <?php 
+                                         include('control_user.php');
+                                         if(isset($_POST['txtsub'])){
+                                             $getdata = new data();
+                                             $contact = $getdata->select_pass(
+                                                $_POST['txtusername'],
+                                                $_POST['txtpass']
+                                            );
+                                             $row = mysqli_fetch_assoc($contact); //sẽ tìm và trả về một dòng kết quả của một truy vấn MySQL nào đó dưới dạng một mảng kết hợp.
+                                             if (empty($_POST['txtusername']) || empty($_POST['txtpass'])) {
+                                                 echo '<script>alert("Bạn chưa nhập mật khẩu or tên tài khoản")</script>';
+                                             }else{
+                                                // echo json_encode($row);
+                                                if(mysqli_num_rows($contact) > 0){ //Một int đại diện cho số hàng được tìm nạp. Trả về 0ở chế độ không có bộ đệm trừ khi tất cả các hàng đã được tìm nạp từ máy chủ.
+                                                    if($_POST['txtpass'] == $row['password']){
+                                                        $_SESSION['login'] = true;
+                                                        $_SESSION['id'] = $row['id'];
+                                                        header('Location:trangchu.html');
+                                                    }
+                                                }
+                                             }
+                                        }
+                                    ?>
                     </form>
                 </div>
             </div>

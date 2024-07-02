@@ -19,19 +19,34 @@
 </head>
 
 <body>
+<?php include('connect2.php');
+    if(isset($_GET["search"]) && !empty(($_GET["search"]))){
+        $key = $_GET["search"];
+        $sql = "SELECT * FROM dangtin Where id LIKE '%$key%' OR hangxe LIKE '%$key%' OR tinhtrang LIKE '%$key%' OR tieude LIKE '%$key%'";
+    }else{
+        $sql = "SELECT * FROM dangtin";
+    } 
+    $result = mysqli_query($conn, $sql);
+    ?>
     <div class="box">
+        <!-- haeder -->
          <!-- haeder -->
          <header class="header navbar navbar-expand">
-            <a href="" class="navbar-brand text-white" style="margin-left:5%;">
-                <img src="../Img/_3e0757bb-eae4-4033-bb53-4e6b11d61967.jpg" alt=""
+            <a href="../view/trangchu.html" class="navbar-brand text-white" style="margin-left:5%;">
+                <img src="../../Img/_3e0757bb-eae4-4033-bb53-4e6b11d61967.jpg" alt=""
                     style="width:65px; height:65px;"></a>
             <div class="navbar-nav" style="margin-left:10%;">
+                <!--  -->
+                <form action="" method="get">
                 <div class="box2" style="margin-bottom:30px;">
                     <div class="container-1">
-                        <span class="icon"><i class="fa fa-search"></i></span>
-                        <input type="search" id="search" placeholder="Search..." />
+                        <span class="icon"><i class="fa fa-search" style="font-size:22px;"></i></span>
+                        <input type="search" id="search" placeholder="Search..." name="search" value="<?php if(isset($_GET["search"])) {header("locatin:search.php");}?>"/>
                     </div>
+                    <!-- <input type="submit" value="tìm">
+                    <input type="button" value="tất cả" onclick="window.locatin.herf = 'search.php'"> -->
                 </div>
+                </form>
             </div>
             <button type="button" class="btn  btn-lg navbar-nav" data-toggle="modal" data-target="#modelId"
                 style="border: none;font-size: 16px; margin-left:25%; border:2px rgb(253, 253, 253) solid;margin-top:10px;">
@@ -42,12 +57,15 @@
                     <i class="fa-solid fa-user icon1"></i>
                     Đăng nhập</a>
             </button>
+            <div style="margin-left:4%;margin-top:1%;">
+                <a href="../user/giohang.html"><i class="fa-solid fa-cart-shopping" style="font-size:28px;color:#ffff;"></i></a>
+            </div>
         </header>
         <!-- nav -->
         <nav class="nav n">
             <div class="navbar-nav navbar-expand-lg" style="margin-left: 14%;">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a href="#home"><i class="fa-solid fa-house" style="font-size:18px;"></i></a></li>
+                    <li class="nav-item"><a href="../view/trangchu.php"><i class="fa-solid fa-house" style="font-size:18px;"></i></a></li>
                     <li class="nav-item"><a href="#home">TiVi</a></li>
                     <li class="nav-item"><a href="#home">Tủ Lạnh</a></li>
                     <li class="nav-item"><a href="#home">Máy Giặt</a></li>

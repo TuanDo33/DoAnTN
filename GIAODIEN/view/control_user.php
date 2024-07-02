@@ -60,4 +60,11 @@ class Data
         $run=mysqli_query($conn,$sql);
         return $run;
     }
+    // tìm kiếm
+    function select_search_product($name){
+        global $conn;
+        $sql="select*from dangtin where name LIKE '%$name%'";
+        $run = mysqli_query($conn, $sql);
+        return $run;
+    }
 }

@@ -29,9 +29,9 @@
                 <div style="margin-bottom:2%;">
                     <div style="width:50%;margin-top:2%;margin-left:25%;">
                         <div style="border:1px solid #5e5e5f;width:100%;height:40px;border-radius:4px;">
-                            <label style="height:7px;color: #A5A5A5;font-size:12px;margin-left:10px;">Khu vực bán xe</label>
+                            <label style="height:7px;color: #A5A5A5;font-size:12px;margin-left:10px;">Khu vực bán hàng</label>
                             <select style="width: 100%; margin-top:-2px;" class="nut2" name="txtbanxe">
-                                <option value="">Chọn tỉnh thành phố</option>
+                                <option value=""></option>
                                 <option value="An Giang">An Giang
                                 <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu
                                 <option value="Bắc Giang">Bắc Giang
@@ -104,13 +104,13 @@
                         <label for="" style="color: #A5A5A5;">tình trạng</label>
                         <div class="radio_tile_group">
                             <div class="input_container">
-                                <input type="radio" name="txttinhtrang" value="xe cũ">
+                                <input type="radio" name="txttinhtrang" value="Hàng Cũ">
                                 <div class="radio_tile">
                                     <label for="">hàng cũ</label>
                                 </div>
                             </div>
                             <div class="input_container">
-                                <input type="radio" name="txttinhtrang" value="xe mới">
+                                <input type="radio" name="txttinhtrang" value="Hàng Mới">
                                 <div class="radio_tile">
                                     <label for="">hàng mới</label>
                                 </div>
@@ -144,27 +144,24 @@
                     </div>
                     <div style="width:50%;margin-top:2%;margin-left:25%;">
                         <div style="border:1px solid #5e5e5f;width:100%;height:40px;border-radius:4px;">
-                            <label style="height:7px;color: #A5A5A5;font-size:12px;margin-left:10px;">Hãng xe</label>
+                            <label style="height:7px;color: #A5A5A5;font-size:12px;margin-left:10px;">Hãng Sản Phẩm</label>
                             <select style="width: 100%; margin-top:-2px;" class="nut2" name="txthangxe">
-                                <option value="Toyota" class="chọn">Toyota</option>
-                                <option value="Hyundai" class="chọn">Hyundai</option>
-                                <option value="KIA" class="chọn">KIA</option>
-                                <option value="VinFast" class="chọn">VinFast</option>
+                                <option value="" class="chọn"></option>
+                                <option value="Panasonic" class="chọn">Panasonic</option>
+                                <option value="LG" class="chọn">LG</option>
+                                <option value="Sony" class="chọn">Sony</option>
+                                <option value="Samsung" class="chọn">Samsung</option>
                                 <option value="Misubishi" class="chọn">Misubishi</option>
-                                <option value="BMW" class="chọn">BMW</option>
-                                <option value="Mercedes-Benz" class="chọn">Mercedes-Benz</option>
-                                <option value="Audi" class="chọn">Audi</option>
-                                <option value="Honda" class="chọn">Honda</option>
-                                <option value="Ford" class="chọn">Ford</option>
-                                <option value="Porsche" class="chọn">Porsche</option>
-                                <option value="Land Rover" class="chọn">Land Rover</option>
-                                <option value="Lexus" class="chọn">Lexus</option>
-                                <option value="Mazda" class="chọn">Mazda</option>
-                                <option value="Tesla" class="chọn">Tesla</option>
-                                <option value="Rolls-Royce" class="chọn">Rolls-Royce</option>
-                                <option value="Lamborghini" class="chọn">Lamborghini</option>
-                                <option value="Ferrari" class="chọn">Ferrari</option>
-                                <option value="Bentley" class="chọn">Bentley</option>
+                                <option value="TCL" class="chọn">TCL</option>
+                                <option value="Daikin" class="chọn">Daikin</option>
+                                <option value="Toshiba" class="chọn">Toshiba</option>
+                                <option value="Electrolux" class="chọn">Electrolux</option>
+                                <option value="AQua" class="chọn">AQua</option>
+                                <option value="SHARP" class="chọn">SHARP</option>
+                                <option value="Casper" class="chọn">Casper</option>
+                                <option value="Funiki" class="chọn">Funiki</option>
+                                <option value="XiaoMi" class="chọn">XiaoMi</option>
+                                <option value="Hitachi" class="chọn">Hitachi</option>
 
                             </select>
                         </div>
@@ -174,30 +171,26 @@
                             <label style="height:7px;color: #A5A5A5;font-size:12px;margin-left:10px;"> Dòng xe</label>
                             <select style="width: 100%; margin-top:-2px;" class="nut2" name="txtdongxe">
                                 <option value=""></option>
-                                <option value="Toyota" class="chọn">Toyota</option>
-                                <option value="Hyundai" class="chọn">Hyundai</option>
-                                <option value="KIA" class="chọn">KIA</option>
-                                <option value="VinFast" class="chọn">VinFast</option>
+                                <option value="Panasonic" class="chọn">Panasonic</option>
+                                <option value="LG" class="chọn">LG</option>
+                                <option value="Sony" class="chọn">Sony</option>
+                                <option value="Samsung" class="chọn">Samsung</option>
                                 <option value="Misubishi" class="chọn">Misubishi</option>
-                                <option value="BMW" class="chọn">BMW</option>
-                                <option value="Mercedes-Benz" class="chọn">Mercedes-Benz</option>
-                                <option value="Audi" class="chọn">Audi</option>
-                                <option value="Honda" class="chọn">Honda</option>
-                                <option value="Ford" class="chọn">Ford</option>
-                                <option value="Porsche" class="chọn">Porsche</option>
-                                <option value="Land Rover" class="chọn">Land Rover</option>
-                                <option value="Lexus" class="chọn">Lexus</option>
-                                <option value="Mazda" class="chọn">Mazda</option>
-                                <option value="Tesla" class="chọn">Tesla</option>
-                                <option value="Rolls-Royce" class="chọn">Rolls-Royce</option>
-                                <option value="Lamborghini" class="chọn">Lamborghini</option>
-                                <option value="Ferrari" class="chọn">Ferrari</option>
-                                <option value="Bentley" class="chọn">Bentley</option>
+                                <option value="TCL" class="chọn">TCL</option>
+                                <option value="Daikin" class="chọn">Daikin</option>
+                                <option value="Toshiba" class="chọn">Toshiba</option>
+                                <option value="Electrolux" class="chọn">Electrolux</option>
+                                <option value="AQua" class="chọn">AQua</option>
+                                <option value="SHARP" class="chọn">SHARP</option>
+                                <option value="Casper" class="chọn">Casper</option>
+                                <option value="Funiki" class="chọn">Funiki</option>
+                                <option value="XiaoMi" class="chọn">XiaoMi</option>
+                                <option value="Hitachi" class="chọn">Hitachi</option>
 
                             </select>
                         </div>
                     </div>
-                    <div style="width:50%;margin-top:1%;margin-left:25%;">
+                    <!-- <div style="width:50%;margin-top:1%;margin-left:25%;">
                         <div style="border:1px solid #5e5e5f;width:100%;height:40px;border-radius:4px;">
                             <label style="height:7px;color: #A5A5A5;font-size:12px;margin-left:10px;">Năm sản xuất</label>
                             <select style="width: 100%; margin-top:-2px;" class="nut2" name="txtnamsanxuat">
@@ -213,19 +206,19 @@
 
                             </select>
                         </div>
-                    </div>
+                    </div> -->
 
 
-                    <div style="margin-left:25%; border:1px solid #5e5e5f;width:50%;height:40px;border-radius:3px ;margin-top:1%;">
+                    <!-- <div style="margin-left:25%; border:1px solid #5e5e5f;width:50%;height:40px;border-radius:3px ;margin-top:1%;">
                         <label for="" style="margin-left:2px;color: #A5A5A5;font-size:12px;height:5px;">Phiên bản *</label>
                         <input type="text" class="nut2" name="txtphienban">
                     </div>
                     <div style="margin-left:25%;width:50%;background-color: white;height:40px;border: 1px solid #5e5e5f;border-radius:4px;margin-top:1%;">
                         <label style="margin-left:1%;height:5px;font-size:12px;color: #A5A5A5">Số km đã đi(ODO) *</label>
                         <input type="text" class="nut2" name="txtsokmdi">
-                    </div>
+                    </div> -->
                   
-                    <div style="width:50%;margin-left:25%; margin-top: 1%;height:70px;">
+                    <!-- <div style="width:50%;margin-left:25%; margin-top: 1%;height:70px;">
                         <label for="" style="color: #A5A5A5;height:9px;">Hộp số</label>
                         <div class="radio_tile_group">
                             <div class="input_container2">
@@ -247,9 +240,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div style="width:50%;margin-left:25%; margin-top: 1%;height:70px;">
+                    <!-- <div style="width:50%;margin-left:25%; margin-top: 1%;height:70px;">
                         <label for="" style="color: #A5A5A5;height:9px;">Kiểu dẫn động</label>
                         <div class="radio_tile_group">
                             <div class="input_container3">
@@ -307,7 +300,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div style="margin-left:25%; border:1px solid #5e5e5f;width:50%;height:40px;border-radius:3px;margin-top:2%;">
                         <label for="" style="margin-left:2px;color: #A5A5A5;font-size:12px;height:5px;">Giá bán*</label>
                         <input type="text" class="nut2" name="txtgiaban">
@@ -317,41 +310,32 @@
                         <div style="width:67%;height:110px;background-color:#F5F5F6;border-radius:5px 5px;">
                             <div>
                                 <p style="margin-left:30px;margin-right:30px;color: #A5A5A5;">
-                                    Tiêu đề tin cần bao gồm các thông tin quan trọng nhất để nâng cao hiệu quả tìm kiếm: hãng xe,
-                                    dòng
-                                    xe,
-                                    phiên bản, năm sản xuất, số tự động / số sàn, số km đã đi, ... và các đặc tính nổi bật khác.
+                                    Tiêu đề tin cần bao gồm các thông tin quan trọng nhất để nâng cao hiệu quả tìm kiếm và các đặc tính nổi bật khác.
                                 </p>
                                 <p style="margin-left: 30px;color: #A5A5A5;">
-                                    Ví dụ: <b style="color: rgb(82, 81, 81);">Toyota Fortuner 2.8V 4x4 AT 2019, máy dầu, số tự
-                                        động, đã đi 80 ngàn km, nhập khẩu, màu
-                                        đen</b>
+                                    Ví dụ: <b style="color: rgb(82, 81, 81);">Tủ lạnh Panasonic Inverter 550 lít Multi Door NR-DZ601VGKV</b>
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div style="margin-left:25%; border:1px solid #5e5e5f;width:50%;height:75px;border-radius:3px;margin-top:2%;">
+                    <div style="margin-left:25%; border:1px solid #5e5e5f;width:50%;height:95px;border-radius:3px;margin-top:2%;">
                         <label style="margin-left:12px;color: #A5A5A5;font-size:12px;height:10px;">Tiêu đề của tin *</label>
-                        <textarea style="width: 100%; height:50px;border: none;" class="nut2" name="txttieude"></textarea>
+                        <textarea style="width: 100%; height:70px;border: none;" class="nut2" name="txttieude"></textarea>
                     </div>
                     <div style="margin-left:25%; border:1px solid #5e5e5f;width:50%;height:150px;border-radius:4px;margin-top:2%;">
                         <label for="" style="margin-left:12px;color: #A5A5A5;font-size:12px;height:5px;">Mô tả chi tiết
                             *</label>
-                        <textarea name="txtmota" id="" style="width: 100%; height:130px;border: none;" class="nut2" placeholder="  Nhập mô tả chi tiết về xe đăng bán
-                · Tình trạng chiếc xe
-                · Thời gian sử dụng xe
-                · Bảo trì xe: bao lâu/lần ở đâu
-                · Tình trạng giấy tờ"></textarea>
+                        <textarea name="txtmota" id="" style="width: 100%; height:130px;border: none;" class="nut2" placeholder="  Nhập mô tả chi tiết về sản phẩm"></textarea>
                     </div>
 
-                    <div style="margin-left:25%;margin-top:4%;width:50%;height:50px;" id="btnShow">
+                    <!-- <div style="margin-left:25%;margin-top:4%;width:50%;height:50px;" id="btnShow">
                         <span style="margin-left:30%;font-size:16px; color: #F05626; cursor: pointer;" onclick="toggleShow()">Hiển thị tùy chọn nâng cao &#8744;</span>
-                        <!-- <span  onclick="toggleShow()" style="cursor: pointer;"> &#8744; </span> -->
-                        <!--id="btnShow"    onclick="toggleShow()"-->
-                    </div>
+                         <span  onclick="toggleShow()" style="cursor: pointer;"> &#8744; </span> -->
+                        <!--id="btnShow"    onclick="toggleShow()"
+                    </div> -->
 
                     <!-- <div id="btnHide" style="display: none;" > -->
-                    <div style="width:50%;margin-top:2%;margin-left:25%;">
+                    <!-- <div style="width:50%;margin-top:2%;margin-left:25%;">
                         <div style="border:1px solid #5e5e5f;width:100%;height:40px;border-radius:4px;">
                             <label style="height:7px;color: #A5A5A5;font-size:12px;margin-left:7px;">Kiểu dáng</label>
                             <select style="width: 100%;margin-top:-2px;" class="nut2" name="txtkieudang">
@@ -393,18 +377,18 @@
                                 <option value="Lắp ráp trong nước" class="chọn">Lắp ráp trong nước</option>
                             </select>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- </div> -->
 
-                    <div style="margin-left:25%;margin-top:2%;width:50%;">
+                    <!-- <div style="margin-left:25%;margin-top:2%;width:50%;">
                         <p style=" color: #A5A5A5;height:10px;">Thông tin người bán </p>
                         <div style="border: 1px solid #e2dfdf;width:100%;height:80px;border-radius:6px;" id="tnShow">
                             <button style="border: none;background-color:#fff;margin-top:30px;margin-left:30%;font-size:16px;color: #F05626; cursor: pointer;" onclick="nutShow()">Thêm thông tin liên hệ mới <span>&#43;</span></button>
                         </div>
-                        <!-- id="tnShow"     onclick="nutShow()"-->
-                    </div>
+                       
+                    </div> -->
                     <!-- <div id="tnHide" style="display: none;"> -->
-                    <div style="width:50%;margin-left:25%;height:auto;margin-top:2%;">
+                    <!-- <div style="width:50%;margin-left:25%;height:auto;margin-top:2%;">
                         <div style=" border:1px solid #5e5e5f;width:90%;height:40px;border-radius:3px;margin-top:2%;margin-left:4%">
                             <label for="" style="margin-left:2%;color: #A5A5A5;font-size:12px;height:5px;">Tên liên hệ*</label>
                             <input type="text" class="nut2" name="txttenlienhe">
@@ -453,7 +437,7 @@
                             <button style="background-color:#fff;color: #F05626;border: 1px solid #F05626;" type="button" class="nut3">Hủy bỏ</button>
                             <button style="background-color: #F05626;border: 1px solid #F05626;color:#fff;margin-left:4%;" type="button" class="nut3">Thêm mới</button>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- </div> -->
                     <!-- <div style="width:50%;margin-left:25%;margin-top:2%;">
                         <button style="background-color: #F05626;border: 1px solid #F05626;color:#fff;" type="submit" class="nut1" >Tiếp tục</button>

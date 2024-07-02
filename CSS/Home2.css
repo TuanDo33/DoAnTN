@@ -360,3 +360,6 @@ border-radius:7px;
 .thuonghieu:hover{
   transform: scale(1.02);
 }
+.hidden{
+  display: none;
+}

@@ -1,6 +1,6 @@
 <?php
 if (!empty($_SESSION['email'])) {
-    header('Location: trangchu.php');
+    header('Location:trangchu.php');
 }
 ?>
 <!DOCTYPE html>
@@ -21,10 +21,11 @@ if (!empty($_SESSION['email'])) {
 </head>
 
 <body class="box">
+    <form role="form" method="post" >
         <div>
             <div class="login">
                 <div style="margin-top:10%;margin-bottom:10%;">
-                    <form role="form" method="post" >
+                    
                         <div style="margin-left:40%;">
                             <img src="../../Img/_3e0757bb-eae4-4033-bb53-4e6b11d61967.jpg" alt="" style="width:70px;height:70px;">
                         </div>
@@ -47,30 +48,27 @@ if (!empty($_SESSION['email'])) {
                             <div style="margin-left:12%;margin-top:4%;" class="row">
                                 <div class="form-check col">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault" style="margin-top:5px;">
                                         Lưu mật khẩu
                                     </label>
                                 </div>
-                                <p class="col"><a href="" style="text-decoration: none;color:#e4c82a;">quên mật khẩu
+                                <p class="col" style="margin-top:5px;"><a href="" style="text-decoration: none;color:#e4c82a;">quên mật khẩu
                                         ?</a></p>
                             </div>
                         </div>
                         <div style="margin-left:17%;margin-top:3%; width:100%;" class="row gx-0">
-                            <div class="col"><button class="btn btn-outline-danger btn2" style="width:100px;"
+                            <div class="col">
+                                <button class="btn btn-outline-danger " style="width:100px;margin-top:4%;"
                                     name="txtsub" type="submit">
                                     Login Now
-                                </button></div>
+                                </button>
+                            </div>
                             <div class="col" style="margin-left:-20%;"><button type="button" class="btn btn-danger btn2"
                                     style="width:100px;"><a href="register1.php"
                                         style="text-decoration: none; color: #ffff;">Đăng ký</a></button></div>
-                                        <a href="trangchu.html" class="link" style="margin-top:4%;margin-left:24%;">Home</a>
-                        </div>
-                        <!-- <div class="row gx-0" style="margin-left:23%;margin-top:3%;width:100%;">
-                    <p class="col">Bạn chưa có tài khoản ?</p>
-                    <p class="col" style="margin-left:-13%;"><a href=""
-                            style="text-decoration: none;color: #e4c82a;">Đăng ký</a></p>
-                </div> -->
-                <?php 
+                                        <a href="trangchu.php" class="link" style="margin-top:4%;margin-left:24%;">Home</a>
+                        </div> 
+                                    <?php 
                                          include('control_user.php');
                                          if(isset($_POST['txtsub'])){
                                              $getdata = new data();
@@ -86,17 +84,18 @@ if (!empty($_SESSION['email'])) {
                                                 if(mysqli_num_rows($contact) > 0){ //Một int đại diện cho số hàng được tìm nạp. Trả về 0ở chế độ không có bộ đệm trừ khi tất cả các hàng đã được tìm nạp từ máy chủ.
                                                     if($_POST['txtpass'] == $row['password']){
                                                         $_SESSION['login'] = true;
-                                                        $_SESSION['id'] = $row['id'];
-                                                        header('Location:trangchu.html');
+                                                        $_SESSION['ID'] = $row['id'];
+                                                        header('location:trangchu.php');
                                                     }
                                                 }
                                              }
                                         }
                                     ?>
-                    </form>
+                    
                 </div>
             </div>
         </div>
+    </form>
 </body>
 
 </html>

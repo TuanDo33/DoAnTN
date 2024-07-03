@@ -2,11 +2,11 @@
 include ('connect2.php');
 class Data
 {
-    function insert_tt($username, $email, $password)
+    function insert_tt($username, $email, $password, $fullname)
     {
         global $conn;
-        $sql = "INSERT INTO accounts_user(username,email,password)
-            values('$username','$email','$password')";
+        $sql = "INSERT INTO accounts_user(username,email,password,fullname)
+            values('$username','$email','$password','$fullname')";
         $run = mysqli_query($conn, $sql);
         return $run;
     }

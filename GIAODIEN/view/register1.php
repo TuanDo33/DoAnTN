@@ -32,11 +32,11 @@
                                 <input type="text" class="form_style row" placeholder="Your Username "
                                     name="txtusername" />
                             </div>
-                            <!-- <div class="form_group">
+                            <div class="form_group">
                                 <label class="sub_title row" for="password">FullName</label>
                                 <input type="text" class="form_style row" placeholder="Your FullName"
                                     name="txtfullname" />
-                            </div> -->
+                            </div>
                             <div class="form_group">
                                 <label class="sub_title row" for="email">Email</label>
                                 <input type="email" class="form_style row" placeholder="Your Email " name="txtemail" />
@@ -81,7 +81,8 @@
             $contact = $getdata->insert_tt(
                 $_POST['txtusername'],
                 $_POST['txtemail'],
-                $_POST['txtpass']
+                $_POST['txtpass'],
+                $_POST['txtfullname']
             );
             $name = $_POST['txtusername'];
             if ($contact) {

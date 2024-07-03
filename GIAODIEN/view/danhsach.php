@@ -154,7 +154,7 @@
                     <p style="font-size:30px;font-weight:500;">Danh sách sản phẩm</p>
                 </div>
                 <?php include '../view/connect2.php';
-                $item_per_page = !empty($_GET['per_page'])?$_GET['per_page']:8;
+                $item_per_page = !empty($_GET['per_page'])?$_GET['per_page']:12;
                 $current_page = !empty($_GET['page'])?$_GET['page']:1; // trang hiện tại
                 $offset = ($current_page -1) * $item_per_page;
                 $product = mysqli_query($conn, "SELECT * FROM dangtin ORDER BY 'id' ASC limit ".$item_per_page." offset ".$offset." ");
@@ -172,8 +172,7 @@
                                 <img src="../../Img/img_product/<?=$row['anh']?>" alt="image">
                                 <div class="content">
                                     <div class="title"><?=$row['hangxe']?></div>
-                                    <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </div>
+                                    <div><?=$row['tieude']?></div>
                                     <div class="favorite">
                                         <i class="ri-heart-fill"></i>
                                         <span style="color:#B90219;font-weight: 600;"><?=$row['giaban']?>.Đ</span>

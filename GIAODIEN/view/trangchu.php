@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -290,7 +291,7 @@
                                     <a href="" style="text-decoration: none;">
                                         <div><img src="../../Img//img đồ án/quatdieuhoa-128x129.png" alt=""
                                                 style="width:55px; height:55px;"></img></div>
-                                        <span style="margin-left:15px;">quạt</span>
+                                        <span style="margin-left:15px;">quát</span>
                                     </a>
                                 </h3>
                             </div>

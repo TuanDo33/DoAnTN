@@ -127,9 +127,8 @@
                                     <li>Ảnh đầu tiên sẽ là ảnh đại diện cho tin đăng </li>
                                 </ul>
                                 <p style="margin-left:30px;margin-right:30px;color: #A5A5A5;">Chụp hình đầy đủ và chi tiết sẽ
-                                    gây ấn tượng tốt với người xem tin: ngoại thất (mặt
-                                    trước,
-                                    mặt sau, 2 bên), nội thất (khoang lái, hàng ghế trước, hàng ghế sau), khoang máy.</p>
+                                   
+                                   </p>
                                 <p style="margin-left: 30px;">
                                     <a href="" style="color: #F05626;text-decoration: underline #F05626;">Tham khảo hình mẫu </a>
                                 </p>
@@ -168,7 +167,7 @@
                     </div>
                     <div style="width:50%;margin-top:1%;margin-left:25%;">
                         <div style="border:1px solid #5e5e5f;width:100%;height:40px;border-radius:4px;">
-                            <label style="height:7px;color: #A5A5A5;font-size:12px;margin-left:10px;"> Dòng xe</label>
+                            <label style="height:7px;color: #A5A5A5;font-size:12px;margin-left:10px;"> Dòng Sản Phẩm</label>
                             <select style="width: 100%; margin-top:-2px;" class="nut2" name="txtdongxe">
                                 <option value=""></option>
                                 <option value="Panasonic" class="chọn">Panasonic</option>

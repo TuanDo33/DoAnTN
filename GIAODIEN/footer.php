@@ -19,15 +19,6 @@
 </head>
 
 <body>
-<?php include('connect2.php');
-    if(isset($_GET["search"]) && !empty(($_GET["search"]))){
-        $key = $_GET["search"];
-        $sql = "SELECT * FROM dangtin Where id LIKE '%$key%' OR hangxe LIKE '%$key%' OR tinhtrang LIKE '%$key%'";
-    }else{
-        $sql = "SELECT * FROM dangtin";
-    } 
-    $result = mysqli_query($conn, $sql);
-    ?>
     <div class="box">
       <!-- footer -->
       <footer class="footer">

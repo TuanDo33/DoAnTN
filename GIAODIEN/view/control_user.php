@@ -67,4 +67,5 @@ class Data
         $run = mysqli_query($conn, $sql);
         return $run;
     }
+    
 }

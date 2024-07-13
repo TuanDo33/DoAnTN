@@ -36,14 +36,21 @@ class data
         $run=mysqli_query($conn,$sql);
         return $run;
     }
-    function up_dangtin($banxe, $tinhtrang, $anh, $hangxe, $dongxe, $namsanxuat, $phienban, $sokmdi, $hopso, $kieudandong, $nhienlieu, $giaban, $tieude, $mota, $kieudang, $socho, $xuatxu, $tenlienhe, $sdt, $tinhtp, $quanhuyen, $phuongxa, $diachi,$id)
+    function ed_dangtin($banxe, $tinhtrang, $anh, $hangxe, $dongxe,   $giaban, $tieude, $mota, $id)
     {
         global $conn;
-        $sql="update dangtin set banxe='$banxe',tinhtrang='$tinhtrang',anh='$anh',hangxe='$hangxe',dongxe='$dongxe',namsanxuat='$namsanxuat',phienban='$phienban',sokmdi='$sokmdi',hopso='$hopso',kieudandong='$kieudandong',nhienlieu='$nhienlieu',giaban='$giaban',tieude='$tieude',mota='$mota',kieudang='$kieudang',socho='$socho',xuatxu='$xuatxu',tenlienhe='$tenlienhe',sdt='$sdt',tinhtp='$tinhtp',quanhuyen='$quanhuyen',phuongxa='$phuongxa',diachi='$diachi' where id=$id";
+        $sql="update dangtin set banxe='$banxe',tinhtrang='$tinhtrang',anh='$anh',hangxe='$hangxe',dongxe='$dongxe',giaban='$giaban',tieude='$tieude',mota='$mota' where id=$id";
     //echo $sql;
     $run=mysqli_query($conn,$sql);
     return $run;
     }
+    // function ed_dangtin($banxe, $tinhtrang, $anh, $hangxe, $dongxe, $giaban, $tieude, $mota, $id)
+    // {
+    //     global $conn;
+    //     $sql="UPDATE dangtin set anxe='$banxe',tinhtrang='$tinhtrang',anh='$anh',hangxe='$hangxe',dongxe='$dongxe',giaban='$giaban',tieude='$tieude',mota='$mota'  where id=$id";
+    //     $run=mysqli_query($conn,$sql);
+    //     return $run;
+    // }
     //hiển thị theo id
     function select_id($table,$id)
     {

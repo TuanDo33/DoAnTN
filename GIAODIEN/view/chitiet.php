@@ -87,13 +87,18 @@
                     <div style="width:700px;height:auto;background-color:#ffff; border-radius:7px 7px; box-shadow: 1px 1px 0px 2px #e9e5e5;
     border-radius: 10px;">
                         <div style="margin-left:4%;margin-right:4%;margin-bottom:9%; margin-top:2.4%;">
-                            <h5 class="card-title" style="margin-top:2%; font-size:20px;font-weight: bold;">Card title
+                            <h5 class="card-title" style="margin-top:2%; font-size:20px;font-weight: bold;">
                             </h5>
-                            <img src="../../Img/63d4c026c181357e6c08ada62db59b8b.jpg" alt=""
+                            <img src="../../Img/img_product/tivi-qled-samsung-4k-65-inch-qa65.jpg" alt=""
                                 style="width:550px;height:auto;margin-top:3%;">
                             <div>
                                 <p style="font-size:22px;margin-top:2%;">Mô tả</p>
-                                <p>sjksfksdfjk</p>
+                                <p>Màn hình 75 inch kích thước lớn, độ phân giải 4K sắc nét, hình ảnh có chiều sâu.<br>
+Dòng tivi QLED kết hợp với Quantum Dot tái hiện 100% dải màu sắc, mang đến hình ảnh sống động, rực rỡ và chân thực.<br>
+Công nghệ Motion Xcelerator, giúp giảm độ trễ và cải thiện chất lượng hình ảnh khi chơi game.<br>
+Công nghệ âm thanh chuyển động theo hình ảnh OTS tạo không gian âm thanh 3 chiều siêu thực.<br>
+Hệ điều hành Tizen™ đa nhiệm, dễ sử dụng.<br>
+Điều khiển bằng giọng nói qua Bixby có tiếng Việt. </p>
                             </div>
                             <div style="margin-top:5%;">
                                 <div>
@@ -116,21 +121,25 @@
                                 xem thêm
                             </button> -->
                         </div>
+                        
                     </div>
                     <!--  -->
                     <div style="width:600px;height:500px;background-color:#ffff;border-radius:7px 7px;margin-left:4%;box-shadow: 1px 1px 0px 2px #e9e5e5;
     border-radius: 10px;">
                         <div style="margin-top:4%;margin-left:4%;margin-bottom:4%;">
-                            <div style="display: flex;">
-                                <p style=" font-size:20px;color: #d63232;">giá tiền: </p>
-                                <p style="color: #d63232;font-size:20px;margin-left:10px;">800.000 Đ</p>
-                                <p style="color: #636262; font-size:17px;margin-left:10px;"> - 1.000.000 Đ</p>
+                            <div style="display: flex;" class="row">
+                                <p style="font-size:18px;font-weight:600;">Smart Tivi QLED Samsung 4K 75 inch QA75Q70D</p>
+                                <div style="display: flex;"> <p style=" font-size:20px;color: #d63232;" >giá tiền: </p>
+                                      <p style="color: #d63232;font-size:20px;margin-left:10px;">3.990.000 Đ</p>
+                                      <!-- <p style="color: #636262; font-size:17px;margin-left:10px;"> - 1.000.000 Đ</p> -->
+                                </div>                              
+                                
                             </div>
                             <div style="display: flex;">
                                 <p style="font-weight: 600;">Tình trạng:</p>
                                 <p style="margin-left:10px;">Còn hàng</p>
                             </div>
-                            <div>
+                            <!-- <div>
                                 <p>đặc điểm nổi bật</p>
                                 <p>Vận hành êm ái chỉ 41 dB với động cơ Direct Drive Inverter.
                                     Công suất 1600 - 1800W, 10 chương trình rửa được 14 bộ chén đĩa.
@@ -141,11 +150,13 @@
                                     Công nghệ Vario Plus giúp linh hoạt chọn khu vực rửa.
                                     Điều khiển bằng điện thoại thông qua ứng dụng LG ThinQ
                                     Dòng sản phẩm: 2024 - Nơi sản xuất: Hàn Quốc</p>
-                            </div>
+                            </div> -->
                             <div>
                                 <button
-                                    style="width:140px;height:30px;background-color: #ffff;color: #f05626;border:1px solid #f05626;">Mua
+                                    style="width:140px;height:30px;background-color: #ffff;color: #f05626;border:1px solid #f05626;border-radius:5px;">Mua
                                     ngay</button>
+                                <button
+                                    style="width:140px;height:30px;background-color: #f05626;color: #ffff;border:1px solid #f05626;border-radius:5px;">Thêm vào giỏ hàng</button>
                             </div>
                         </div>
                     </div>
@@ -279,7 +290,7 @@
                 </div>
             </div>
         </footer>
-         <!-- <?php include('footer.php');?>  -->
+         
     </div>
     <script src="../../javascrip/xemthem.js"></script>
 </body>

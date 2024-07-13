@@ -6,7 +6,7 @@
             <tr>
                <th scope=" col">#</th>
                <th scope="col">Name</th>
-               <!-- <th scope="col">Phone Number</th> -->
+               <th scope="col">Full Name</th>
                <th scope="col">Email</th>
                <th scope="col">Password</th>
                <th scope="col">Edit</th>
@@ -25,6 +25,7 @@
             <tr>
                <th scope="row"><?php echo $se_acc['id']?></th>
                <td><?php echo $se_acc['username']?></td>
+               <td><?php echo $se_acc['fullname']?></td>
                <td><?php echo $se_acc['email']?></td>
                <td><?php echo $se_acc['password']?></td>
                <td><button type="button" class="btn btn-warning"><a href="<?php echo $se_acc['id']?>">

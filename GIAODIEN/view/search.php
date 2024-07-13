@@ -191,11 +191,11 @@
                                 <img src="../../Img/img_product/<?=$row['anh']?>" alt="image">
                                 <div class="content">
                                     <div class="title"><?=$row['hangxe']?></div>
-                                    <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    <div><?=$row['tieude']?>
                                     </div>
                                     <div class="favorite">
                                         <i class="ri-heart-fill"></i>
-                                        <span>3</span>
+                                        <span style="color:#B90219;font-weight: 600;"><?=$row['giaban']?>.Đ</span>
                                     </div>
                                     <div>
                                         <button class="mua"><a href="../user/giohang.html">mua ngay</a></button>

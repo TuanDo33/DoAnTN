@@ -1,13 +1,23 @@
 <link rel="stylesheet" href="../../CSS/cssAdmin.css">
-
+<link rel="stylesheet" href="../../CSS/Home2.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <div class="list_product">
    <form action = "GET" class= "form_list">
       <table class= "table tb_listAcc">
+      <form method="GET">
+                <div class="box2" style="margin-bottom:30px;">
+                    <div class="container-1">
+                        <span class="icon"><i class="fa fa-search" style="font-size:22px;"></i></span>
+                        <input type="search" id="search" placeholder="Search..." name="txtsearch" style="border:1px solid #000;"/>
+                    </div>
+                </div>
+               
+            </form>
          <thead>
             <tr>
                <th scope="col">#</th>
-               <th scope="col">Name</th>
-               <th scope="col">Owner</th>
+               <th scope="col">trademark</th>
+               <th scope="col">status</th>
                <th scope="col">Price</th>
                <th scope="col">Image</th>
                <th scope="col">Edit</th>
@@ -26,11 +36,11 @@
                <td scope="row"><?php echo $se_product['id']?></td>
                <td><?php echo $se_product['hangxe']?></td>  
                <td><?php echo $se_product['tinhtrang']?></td>
-               <td><?php echo $se_product['giaban']?></td>
+               <td style="color: #d63232;;"><?php echo $se_product['giaban']?>.Đ</td>
                <td>
                   <img src="../Img/img_product/<?php echo $se_product['anh']?>" style="height:200px; width: 300px; object-fit: cover" alt="">
                </td>
-               <td><button type="button" class="btn btn-warning"> <a href="../up_đăngtin.php?id=<?php echo $se_product['id']?>">
+               <td><button type="button" class="btn btn-warning"> <a href="../Admin/view/edProduct.php?id=<?php echo $se_product['id']?>">
                                                 <span>Edit</span></a></button></td>
               
                <td><button type="button" class="btn btn-danger"><a href="../config/delete_all.php?del_product=<?php echo $se_product['id']?>"

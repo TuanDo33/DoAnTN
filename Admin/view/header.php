@@ -9,7 +9,10 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
 <div class="header">
-   <h3>TRANG QUẢN TRỊ VIÊN </h3>
+   <div class="row"><img src="../Img/_3e0757bb-eae4-4033-bb53-4e6b11d61967.jpg" alt=""
+    style="width:65px; height:65px;margin-left:2%;margin-top:5px;">
+   <h3 class="col" style="margin-left:30%;">TRANG QUẢN TRỊ VIÊN </h3></div>
+
 </div>
 <div class="select_option_admin">
    <nav class="navbar navbar-expand-lg ">
@@ -23,6 +26,7 @@
             <a class="nav-item nav-link " href="index.php?act=qltk">Quản Lý tài khoản UserAdmin </a>
             <a class="nav-item nav-link" href="index.php?act=qlsp">Quản lý danh sách sản phẩm</a>
             <a class="nav-item nav-link" href="index.php?act=qlbd">Đăng sản phẩm </a>
+            <a class="nav-item nav-link" href="index.php?act=qldh">quản đơn hàng </a>
             <a class="nav-item nav-link" href="index.php?act=qltk2">quản lý user </a>
             <a class="nav-item nav-link" href="index.php?act=logout">đăng xuất</a>
             <a class="nav-item nav-link" href="../models/change_pass.php?act=change-password">Đổi mật khẩu</a>

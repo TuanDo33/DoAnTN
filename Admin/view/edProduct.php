@@ -1,0 +1,525 @@
+
+<!-- <link rel="stylesheet" href="CSS/Home.css"> -->
+<link rel="stylesheet" href="../../CSS/dangtin.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/fonts/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<div class="box_news">
+<div class="box">
+        <!-- đầu trang phần logo  -->
+        
+        <!-- <div style="width:100%; background-color: #F05626; height: 60px;">
+        <div>
+            <img src="./img/logo_white.png" alt="" style="margin-left:12%;margin-top:1%;">
+            <div style="margin-left:49%; margin-top:-2%;">
+                <p style="color: #fff;font-size:24px;">Đăng tin</p>
+            </div>
+        </div>
+        </div> -->
+
+
+
+        <!-- đây là nội dung phần thân  -->
+         <?php 
+         include('../../config/control_pt.php');
+         $get_data=new data();
+         if (isset($_GET['id'])){
+            $select_id=$get_data->se_all_id('dangtin',$_GET['id']);
+            foreach($select_id as $ed_pro)
+         ?>
+        <div style="width:80%;background-color:#fff;height:auto; margin-left:11%;
+        margin-top: 2%;border-radius:10px 10px;border: 1px solid #e2dfdf; margin-bottom:2%; ">
+            <form method="post" enctype="multipart/form-data">
+                <div style="margin-bottom:2%;">
+                    <div style="width:50%;margin-top:2%;margin-left:25%;">
+                        <div style="border:1px solid #5e5e5f;width:100%;height:40px;border-radius:4px;">
+                            <label style="height:7px;color: #A5A5A5;font-size:12px;margin-left:10px;">Khu vực bán hàng</label>
+                            <select style="width: 100%; margin-top:-2px;" class="nut2" name="txtbanxe">
+                                <option value=""></option>
+                                <option value="An Giang">An Giang
+                                <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu
+                                <option value="Bắc Giang">Bắc Giang
+                                <option value="Bắc Kạn">Bắc Kạn
+                                <option value="Bạc Liêu">Bạc Liêu
+                                <option value="Bắc Ninh">Bắc Ninh
+                                <option value="Bến Tre">Bến Tre
+                                <option value="Bình Định">Bình Định
+                                <option value="Bình Dương">Bình Dương
+                                <option value="Bình Phước">Bình Phước
+                                <option value="Bình Thuận">Bình Thuận
+                                <option value="Bình Thuận">Bình Thuận
+                                <option value="Cà Mau">Cà Mau
+                                <option value="Cao Bằng">Cao Bằng
+                                <option value="Đắk Lắk">Đắk Lắk
+                                <option value="Đắk Nông">Đắk Nông
+                                <option value="Điện Biên">Điện Biên
+                                <option value="Đồng Nai">Đồng Nai
+                                <option value="Đồng Tháp">Đồng Tháp
+                                <option value="Đồng Tháp">Đồng Tháp
+                                <option value="Gia Lai">Gia Lai
+                                <option value="Hà Giang">Hà Giang
+                                <option value="Hà Nam">Hà Nam
+                                <option value="Hà Tĩnh">Hà Tĩnh
+                                <option value="Hải Dương">Hải Dương
+                                <option value="Hậu Giang">Hậu Giang
+                                <option value="Hòa Bình">Hòa Bình
+                                <option value="Hưng Yên">Hưng Yên
+                                <option value="Khánh Hòa">Khánh Hòa
+                                <option value="Kiên Giang">Kiên Giang
+                                <option value="Kon Tum">Kon Tum
+                                <option value="Lai Châu">Lai Châu
+                                <option value="Lâm Đồng">Lâm Đồng
+                                <option value="Lạng Sơn">Lạng Sơn
+                                <option value="Lào Cai">Lào Cai
+                                <option value="Long An">Long An
+                                <option value="Nam Định">Nam Định
+                                <option value="Nghệ An">Nghệ An
+                                <option value="Ninh Bình">Ninh Bình
+                                <option value="Ninh Thuận">Ninh Thuận
+                                <option value="Phú Thọ">Phú Thọ
+                                <option value="Quảng Bình">Quảng Bình
+                                <option value="Quảng Bình">Quảng Bình
+                                <option value="Quảng Ngãi">Quảng Ngãi
+                                <option value="Quảng Ninh">Quảng Ninh
+                                <option value="Quảng Trị">Quảng Trị
+                                <option value="Sóc Trăng">Sóc Trăng
+                                <option value="Sơn La">Sơn La
+                                <option value="Tây Ninh">Tây Ninh
+                                <option value="Thái Bình">Thái Bình
+                                <option value="Thái Nguyên">Thái Nguyên
+                                <option value="Thanh Hóa">Thanh Hóa
+                                <option value="Thừa Thiên Huế">Thừa Thiên Huế
+                                <option value="Tiền Giang">Tiền Giang
+                                <option value="Trà Vinh">Trà Vinh
+                                <option value="Tuyên Quang">Tuyên Quang
+                                <option value="Vĩnh Long">Vĩnh Long
+                                <option value="Vĩnh Phúc">Vĩnh Phúc
+                                <option value="Yên Bái">Yên Bái
+                                <option value="Phú Yên">Phú Yên
+                                <option value="Tp.Cần Thơ">Tp.Cần Thơ
+                                <option value="Tp.Đà Nẵng">Tp.Đà Nẵng
+                                <option value="Tp.Hải Phòng">Tp.Hải Phòng
+                                <option value="Tp.Hà Nội">Tp.Hà Nội
+                                <option value="TP  HCM">TP HCM
+                            </select>
+                        </div>
+                    </div>
+                    <div style="width:50%;margin-left:25%; margin-top: 1%;height:70px;">
+                        <label for="" style="color: #A5A5A5;">tình trạng</label>
+                        <div class="radio_tile_group">
+                            <div class="input_container">
+                                <input type="radio" name="txttinhtrang" value="Hàng Cũ"
+                                <?php if($ed_pro['tinhtrang']=='Hàng Cũ')
+                                            echo "checked"?>>
+                                <div class="radio_tile">
+                                    <label for="">hàng cũ</label>
+                                </div>
+                            </div>
+                            <div class="input_container">
+                                <input type="radio" name="txttinhtrang" value="Hàng Mới"
+                                <?php if($ed_pro['tinhtrang']=='Hàng Mới')
+                                            echo "checked"?>>
+                                <div class="radio_tile">
+                                    <label for="">hàng mới</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-left:25%;margin-top:1%;">
+                        <P style="color: #A5A5A5;">Ảnh xe *</P>
+                        <div style="width:67%;height:140px;background-color:#F5F5F6;border-radius:5px 5px;">
+                            <div>
+                                <ul style="margin-left:30px;">
+                                    <li>Đăng ít nhất 3 ảnh </li>
+                                    <li>Ảnh đầu tiên sẽ là ảnh đại diện cho tin đăng </li>
+                                </ul>
+                                <p style="margin-left:30px;margin-right:30px;color: #A5A5A5;">Chụp hình đầy đủ và chi tiết sẽ
+                                   
+                                   </p>
+                                <p style="margin-left: 30px;">
+                                    <a href="" style="color: #F05626;text-decoration: underline #F05626;">Tham khảo hình mẫu </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-left:25%; width: 50%; margin-top:2%;border: 2px dashed #FFB8A1;border-radius: 4px;height:70px;">
+                        <!-- <span>
+                    <i class="icon-add-photo"></i>
+                </span> -->
+                        <input type="file" style="margin-left:25%;margin-top:25px;" name="txtfile" multiple="true">
+                    </div>
+                    <div  style="margin-left:25%; width: 50%; margin-top:2%;">
+                    <img src="../../Img/img_product/<?php echo $ed_pro['anh']?>" style="height:200px; width: 300px; object-fit: cover" alt="">
+                    </div>
+                    <div style="width:50%;margin-top:2%;margin-left:25%;">
+                        <div style="border:1px solid #5e5e5f;width:100%;height:40px;border-radius:4px;">
+                            <label style="height:7px;color: #A5A5A5;font-size:12px;margin-left:10px;">Hãng Sản Phẩm</label>
+                            <select style="width: 100%; margin-top:-2px;" class="nut2" name="txthangxe">
+                                <option value="" class="chọn"><?php echo $ed_pro['hangxe']?></option>
+                                <option value="Panasonic" class="chọn">Panasonic</option>
+                                <option value="LG" class="chọn">LG</option>
+                                <option value="Sony" class="chọn">Sony</option>
+                                <option value="Samsung" class="chọn">Samsung</option>
+                                <option value="Misubishi" class="chọn">Misubishi</option>
+                                <option value="TCL" class="chọn">TCL</option>
+                                <option value="Daikin" class="chọn">Daikin</option>
+                                <option value="Toshiba" class="chọn">Toshiba</option>
+                                <option value="Electrolux" class="chọn">Electrolux</option>
+                                <option value="AQua" class="chọn">AQua</option>
+                                <option value="SHARP" class="chọn">SHARP</option>
+                                <option value="Casper" class="chọn">Casper</option>
+                                <option value="Funiki" class="chọn">Funiki</option>
+                                <option value="XiaoMi" class="chọn">XiaoMi</option>
+                                <option value="Hitachi" class="chọn">Hitachi</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div style="width:50%;margin-top:1%;margin-left:25%;">
+                        <div style="border:1px solid #5e5e5f;width:100%;height:40px;border-radius:4px;">
+                            <label style="height:7px;color: #A5A5A5;font-size:12px;margin-left:10px;"> Dòng Sản Phẩm</label>
+                            <select style="width: 100%; margin-top:-2px;" class="nut2" name="txtdongxe">
+                                <option value=""><?php echo $ed_pro['dongxe']?></option>
+                                <option value="Panasonic" class="chọn">Panasonic</option>
+                                <option value="LG" class="chọn">LG</option>
+                                <option value="Sony" class="chọn">Sony</option>
+                                <option value="Samsung" class="chọn">Samsung</option>
+                                <option value="Misubishi" class="chọn">Misubishi</option>
+                                <option value="TCL" class="chọn">TCL</option>
+                                <option value="Daikin" class="chọn">Daikin</option>
+                                <option value="Toshiba" class="chọn">Toshiba</option>
+                                <option value="Electrolux" class="chọn">Electrolux</option>
+                                <option value="AQua" class="chọn">AQua</option>
+                                <option value="SHARP" class="chọn">SHARP</option>
+                                <option value="Casper" class="chọn">Casper</option>
+                                <option value="Funiki" class="chọn">Funiki</option>
+                                <option value="XiaoMi" class="chọn">XiaoMi</option>
+                                <option value="Hitachi" class="chọn">Hitachi</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <!-- <div style="width:50%;margin-top:1%;margin-left:25%;">
+                        <div style="border:1px solid #5e5e5f;width:100%;height:40px;border-radius:4px;">
+                            <label style="height:7px;color: #A5A5A5;font-size:12px;margin-left:10px;">Năm sản xuất</label>
+                            <select style="width: 100%; margin-top:-2px;" class="nut2" name="txtnamsanxuat">
+                                <option value=""></option>
+                                <option value="2000" class="chọn">2000</option>
+                                <option value="2001" class="chọn">2001</option>
+                                <option value="2002" class="chọn">2002</option>
+                                <option value="2003" class="chọn">2003</option>
+                                <option value="2009" class="chọn">2009</option>
+                                <option value="2010" class="chọn">2010</option>
+                                <option value="sau 2020" class="chọn">sau 2020</option>
+                                <option value="trước 2020" class="chọn">trước 2020</option>
+
+                            </select>
+                        </div>
+                    </div> -->
+
+
+                    <!-- <div style="margin-left:25%; border:1px solid #5e5e5f;width:50%;height:40px;border-radius:3px ;margin-top:1%;">
+                        <label for="" style="margin-left:2px;color: #A5A5A5;font-size:12px;height:5px;">Phiên bản *</label>
+                        <input type="text" class="nut2" name="txtphienban">
+                    </div>
+                    <div style="margin-left:25%;width:50%;background-color: white;height:40px;border: 1px solid #5e5e5f;border-radius:4px;margin-top:1%;">
+                        <label style="margin-left:1%;height:5px;font-size:12px;color: #A5A5A5">Số km đã đi(ODO) *</label>
+                        <input type="text" class="nut2" name="txtsokmdi">
+                    </div> -->
+                  
+                    <!-- <div style="width:50%;margin-left:25%; margin-top: 1%;height:70px;">
+                        <label for="" style="color: #A5A5A5;height:9px;">Hộp số</label>
+                        <div class="radio_tile_group">
+                            <div class="input_container2">
+                                <input type="radio" value="số sàn" name="txthopso">
+                                <div class="radio_tile">
+                                    <label for="">Số sàn</label>
+                                </div>
+                            </div>
+                            <div class="input_container2">
+                                <input type="radio" value="số tự động" name="txthopso">
+                                <div class="radio_tile">
+                                    <label for="">Số tự động</label>
+                                </div>
+                            </div>
+                            <div class="input_container2">
+                                <input type="radio" value="bán tự động" name="txthopso">
+                                <div class="radio_tile">
+                                    <label for="">Bán tự động</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- <div style="width:50%;margin-left:25%; margin-top: 1%;height:70px;">
+                        <label for="" style="color: #A5A5A5;height:9px;">Kiểu dẫn động</label>
+                        <div class="radio_tile_group">
+                            <div class="input_container3">
+                                <input type="radio" value="fwd" name="txtkieudandong">
+                                <div class="radio_tile">
+                                    <label for="">FWD</label>
+                                </div>
+                            </div>
+                            <div class="input_container3">
+                                <input type="radio" value="rwd" name="txtkieudandong">
+                                <div class="radio_tile">
+                                    <label for="">RWD</label>
+                                </div>
+                            </div>
+                            <div class="input_container3">
+                                <input type="radio" value="awd" name="txtkieudandong">
+                                <div class="radio_tile">
+                                    <label for="">AWD</label>
+                                </div>
+                            </div>
+                            <div class="input_container3">
+                                <input type="radio" value="4wd" name="txtkieudandong">
+                                <div class="radio_tile">
+                                    <label for="">4WD</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="width:50%;margin-left:25%; margin-top: 1%;height:70px;">
+                        <label for="" style="color: #A5A5A5;height:9px;">Nhiên liệu</label>
+                        <div class="radio_tile_group">
+                            <div class="input_container3">
+                                <input type="radio" value="xăng" name="txtnhienlieu">
+                                <div class="radio_tile">
+                                    <label for="">Xăng</label>
+                                </div>
+                            </div>
+                            <div class="input_container3">
+                                <input type="radio" value="dầu" name="txtnhienlieu">
+                                <div class="radio_tile">
+                                    <label for="">Dầu</label>
+                                </div>
+                            </div>
+                            <div class="input_container3">
+                                <input type="radio" value="điện" name="txtnhienlieu">
+                                <div class="radio_tile">
+                                    <label for="">Điện</label>
+                                </div>
+                            </div>
+                            <div class="input_container3">
+                                <input type="radio" value="hybird" name="txtnhienlieu">
+                                <div class="radio_tile">
+                                    <label for="">Hybird</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div style="margin-left:25%; border:1px solid #5e5e5f;width:50%;height:40px;border-radius:3px;margin-top:2%;">
+                        <label for="" style="margin-left:2px;color: #A5A5A5;font-size:12px;height:5px;">Giá bán*</label>
+                        <input type="text" class="nut2" name="txtgiaban" value="<?php echo $ed_pro['giaban']?>">
+                    </div>
+                    <div style="margin-left:25%;margin-top:1%;">
+                        <P style="color: #A5A5A5;">Tiêu đề của tin *</P>
+                        <div style="width:67%;height:110px;background-color:#F5F5F6;border-radius:5px 5px;">
+                            <div>
+                                <p style="margin-left:30px;margin-right:30px;color: #A5A5A5;">
+                                    Tiêu đề tin cần bao gồm các thông tin quan trọng nhất để nâng cao hiệu quả tìm kiếm và các đặc tính nổi bật khác.
+                                </p>
+                                <p style="margin-left: 30px;color: #A5A5A5;">
+                                    Ví dụ: <b style="color: rgb(82, 81, 81);">Tủ lạnh Panasonic Inverter 550 lít Multi Door NR-DZ601VGKV</b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-left:25%; border:1px solid #5e5e5f;width:50%;height:95px;border-radius:3px;margin-top:2%;">
+                        <label style="margin-left:12px;color: #A5A5A5;font-size:12px;height:10px;">Tiêu đề của tin *</label>
+                        <textarea style="width: 100%; height:70px;border: none;" class="nut2" name="txttieude"><?php echo $ed_pro['tieude']?></textarea>
+                    </div>
+                    <div style="margin-left:25%; border:1px solid #5e5e5f;width:50%;height:150px;border-radius:4px;margin-top:2%;">
+                        <label for="" style="margin-left:12px;color: #A5A5A5;font-size:12px;height:5px;">Mô tả chi tiết
+                            *</label>
+                        <textarea name="txtmota" id="" style="width: 100%; height:130px;border: none;" class="nut2" placeholder="  Nhập mô tả chi tiết về sản phẩm"><?php echo $ed_pro['mota']?></textarea>
+                    </div>
+
+                    <!-- <div style="margin-left:25%;margin-top:4%;width:50%;height:50px;" id="btnShow">
+                        <span style="margin-left:30%;font-size:16px; color: #F05626; cursor: pointer;" onclick="toggleShow()">Hiển thị tùy chọn nâng cao &#8744;</span>
+                         <span  onclick="toggleShow()" style="cursor: pointer;"> &#8744; </span> -->
+                        <!--id="btnShow"    onclick="toggleShow()"
+                    </div> -->
+
+                    <!-- <div id="btnHide" style="display: none;" > -->
+                    <!-- <div style="width:50%;margin-top:2%;margin-left:25%;">
+                        <div style="border:1px solid #5e5e5f;width:100%;height:40px;border-radius:4px;">
+                            <label style="height:7px;color: #A5A5A5;font-size:12px;margin-left:7px;">Kiểu dáng</label>
+                            <select style="width: 100%;margin-top:-2px;" class="nut2" name="txtkieudang">
+                                <option value="chọn phiên kiểu dáng">chọn phiên kiểu dáng</option>
+                                <option value="Sedan" class="chọn">Sedan</option>
+                                <option value="Hatchback" class="chọn">Hatchback</option>
+                                <option value="SUV" class="chọn">SUV</option>
+                                <option value="Bán tải" class="chọn">Bán tải</option>
+                                <option value="Xe tải" class="chọn">Xe tải</option>
+                                <option value="MPV" class="chọn">MPV</option>
+                                <option value="Van/Minivan" class="chọn">Van/Minivan</option>
+                                <option value="Coupe" class="chọn">Coupe</option>
+                                <option value="Mui Trần" class="chọn">Mui Trần</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div style="width:50%;margin-top:2%;margin-left:25%;">
+                        <div style="border:1px solid #5e5e5f;width:100%;height:40px;border-radius:4px;">
+                            <label style="height:7px;color: #A5A5A5;font-size:12px;margin-left:10px;">Số chỗ</label>
+                            <select style="width: 100%; margin-top:-2px;" class="nut2" name=txtsocho>
+                                <option value="">Chọn số chỗ</option>
+                                <option value="2" class="chọn">2</option>
+                                <option value="4" class="chọn">4</option>
+                                <option value="9" class="chọn">9</option>
+                                <option value="7" class="chọn">7</option>
+                                <option value="14" class="chọn">14</option>
+                                <option value="3" class="chọn">3</option>
+                                <option value="8" class="chọn">8</option>
+                                <option value="6" class="chọn">6</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div style="width:50%;margin-top:2%;margin-left:25%;">
+                        <div style="border:1px solid #5e5e5f;width:100%;height:40px;border-radius:4px;">
+                            <label style="height:7px;color: #A5A5A5;font-size:12px;margin-left:10px;">Xuất xứ</label>
+                            <select style="width: 100%; margin-top:-2px;" class="nut2" name="txtxuatxu">
+                                <option value="">Chọn xuất xứ</option>
+                                <option value="Nhập khẩu" class="chọn">Nhập khẩu </option>
+                                <option value="Lắp ráp trong nước" class="chọn">Lắp ráp trong nước</option>
+                            </select>
+                        </div>
+                    </div> -->
+                    <!-- </div> -->
+
+                    <!-- <div style="margin-left:25%;margin-top:2%;width:50%;">
+                        <p style=" color: #A5A5A5;height:10px;">Thông tin người bán </p>
+                        <div style="border: 1px solid #e2dfdf;width:100%;height:80px;border-radius:6px;" id="tnShow">
+                            <button style="border: none;background-color:#fff;margin-top:30px;margin-left:30%;font-size:16px;color: #F05626; cursor: pointer;" onclick="nutShow()">Thêm thông tin liên hệ mới <span>&#43;</span></button>
+                        </div>
+                       
+                    </div> -->
+                    <!-- <div id="tnHide" style="display: none;"> -->
+                    <!-- <div style="width:50%;margin-left:25%;height:auto;margin-top:2%;">
+                        <div style=" border:1px solid #5e5e5f;width:90%;height:40px;border-radius:3px;margin-top:2%;margin-left:4%">
+                            <label for="" style="margin-left:2%;color: #A5A5A5;font-size:12px;height:5px;">Tên liên hệ*</label>
+                            <input type="text" class="nut2" name="txttenlienhe">
+                        </div>
+                        <div style=" border:1px solid #5e5e5f;width:90%;height:40px;border-radius:3px;margin-top:2%;margin-left:4%">
+                            <label for="" style="margin-left:2%;color: #A5A5A5;font-size:12px;height:5px;">Số điện thoại liên
+                                hệ*</label>
+                            <input type="text" class="nut2" name="txtsdt">
+                        </div>
+                        <div style=" border:1px solid #5e5e5f;width:90%;height:40px;border-radius:3px;margin-top:2%;margin-left:4%">
+                            <label for="" style="margin-left:2%;color: #A5A5A5;font-size:12px;height:5px;">Tỉnh/Thành
+                                phố*</label>
+                            <select style="border: none;" class="nut2" name="txttinhtp">
+                                <option value="" style="font-size:14px;">Chọn Tỉnh/Thành phố</option>
+                                <option value="Hà Nội">Hà Nội</option>
+                                <option value="TP Hồ Chí Minh">TP Hồ Chí Minh</option>
+                                <option value="Hạ Long">Hạ Long</option>
+                                <option value="Đà Nẵng">Đà Nẵng</option>
+                                <option value="Nha Trang">Nha Trang</option>
+                                <option value="Sapa">Sapa</option>
+                                <option value="Bắc Giang">Bắc Giang </option>
+                                <option value="Ninh Bình">Ninh Bình</option>
+                                <option value="Thái Nguyên">Thái Nguyên</option>
+                            </select>
+                        </div>
+                        <div style=" border:1px solid #5e5e5f;width:90%;height:40px;border-radius:3px;margin-top:2%;margin-left:4%">
+                            <label for="" style="margin-left:2%;color: #A5A5A5;font-size:12px;height:5px;">Quận/huyện*</label>
+                            <select style="border: none;" class="nut2" name="txtquanhuyen">
+                                <option value="Chọn Quận/huyện" style="font-size:14px;">Chọn Quận/huyện</option>
+                            </select>
+                        </div>
+                        <div style=" border:1px solid #5e5e5f;width:90%;height:40px;border-radius:3px;margin-top:2%;margin-left:4%">
+                            <label for="" style="margin-left:2%;color: #A5A5A5;font-size:12px;height:5px;">Phương/xã*</label>
+                            <select style="border: none;" class="nut2" name="txtphuongxa">
+                                <option value="Chọn Phương/xã" style="font-size:14px;">Chọn Phương/xã</option>
+                            </select>
+                        </div>
+                        <div style=" border:1px solid #5e5e5f;width:90%;height:40px;border-radius:3px;margin-top:2%;margin-left:4%">
+                            <label for="" style="margin-left:2%;color: #A5A5A5;font-size:12px;height:5px;">Địa chỉ*</label>
+                            <input type="text" class="nut2" name="txtdiachi">
+                        </div>
+                        <div style="margin-top:2%;margin-left:4%">
+                            <input type="checkbox"> Đặt làm mặc định
+                        </div>
+                        <div style="margin-left:4%;margin-top:2%;">
+                            <button style="background-color:#fff;color: #F05626;border: 1px solid #F05626;" type="button" class="nut3">Hủy bỏ</button>
+                            <button style="background-color: #F05626;border: 1px solid #F05626;color:#fff;margin-left:4%;" type="button" class="nut3">Thêm mới</button>
+                        </div>
+                    </div> -->
+                    <!-- </div> -->
+                    <!-- <div style="width:50%;margin-left:25%;margin-top:2%;">
+                        <button style="background-color: #F05626;border: 1px solid #F05626;color:#fff;" type="submit" class="nut1" >Tiếp tục</button>
+                    </div> -->
+                    <div style="width:50%;margin-left:25%;margin-top:2%;">
+                        <button style="background-color:#fff;color: #F05626;border: 1px solid #F05626;" type="submit" class="nut1" name="txtsub">update sản phẩm</button>
+                    </div>
+                </div>
+            </form>
+            <?php
+            if (isset($_POST['txtsub'])) // Thực thị sau khi nhấn nút submit
+            {
+
+                //else{
+                //  if($_POST['txtpassword']!=$_POST['txtrepassword']) {
+                //  echo"<script>alert('mật khẩu không trùng khớp')</script>";
+                // }
+                //else {
+                //  $check_Username=$get_data->select_username();
+                //  while ($row = mysqli_fetch_array(($check_Username))) {
+                //   if ($row['Username'] == $_POST['txtusername']) {
+                //   echo "<script>alert('trung thong tin')</script>";
+                //  return;
+                //  }
+                // }
+                if(empty($_FILES['txtfile']['name'])) $picture=$ed_pro['anh'];//lấy ảnh cũ
+                else $picture=$_FILES['txtfile']['name']; 
+                move_uploaded_file($_FILES['txtfile']['tmp_name'], '../Img/img_product/' . $_FILES['txtfile']['name']);
+                $update = $get_data->ed_dangtin(
+                    $_POST['txtbanxe'],
+                    $_POST['txttinhtrang'],
+                    $picture,
+                    $_POST['txthangxe'],
+                    $_POST['txtdongxe'],
+                    $_POST['txtgiaban'],
+                    $_POST['txttieude'],
+                    $_POST['txtmota'],
+                    $_GET['id']
+                );
+                // if ($update) echo "<script>alert('thêm mới sản phẩm thành công')
+                //     window.location='index.php?act=qlsp';
+                //     </script>";
+                    if ($update) echo "<script>alert('sửa phẩm thành công')
+                    window.location='index.php';
+                    </script>";
+                //else echo"<script>alert('thêm mới không thành công')</script>";
+            }
+              }
+            // }
+            //     }
+            //     }
+            ?>
+
+        </div>
+
+
+
+        <!-- link javascrip -->
+        <script src="/javascrip/slider.js"></script>
+        <script src="/javascrip/content.js"></script>
+        <script src="/javascrip/dangtin.js"></script>
+
+
+        <!-- bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    </div>
+</div>

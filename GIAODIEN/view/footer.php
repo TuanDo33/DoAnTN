@@ -37,7 +37,7 @@
                     <div class="thongtin">
                         <p class="tieudefooter">Thông tin chung </p>
                         <p><a href="">giới thiệu về Tstore</a></p>
-                        <p><a href="">tintức</a></p>
+                        <p><a href="">tin tức</a></p>
                         <p><a href="">hợp tác</a></p>
                     </div>
                 </div>

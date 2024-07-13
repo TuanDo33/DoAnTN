@@ -169,6 +169,7 @@
                         {?>
                         <div class="col-sm-3" style="margin-top:2%;">
                             <div class="card">
+                                <a  href="chitiet.php?id<?=$row['id']?>" style="text-decoration: none;color: #000;">
                                 <img src="../../Img/img_product/<?=$row['anh']?>" alt="image">
                                 <div class="content">
                                     <div class="title"><?=$row['hangxe']?></div>
@@ -181,6 +182,7 @@
                                         <button class="mua"><a href="../user/giohang.html">mua ngay</a></button>
                                     </div>
                                 </div>
+                                </a>
                             </div>
                         </div>
                         <?php }?>
@@ -480,7 +482,7 @@
                 </div>
             </div>
         </footer> -->
-        <!-- <?php include('../footer.php');?> -->
+         <?php include('footer.php');?>
     </div>
     <script src="../../javascrip/home.js"></script>
 </body>

@@ -32,6 +32,9 @@ if (!isset($_SESSION['userName'])) {
          case 'qltk2':
             include ("view/listAcc2.php");
             break;
+         case 'qldh':
+            include ("view/listOders.php");
+            break;   
          case 'logout':
             session_start();
             if (isset($_SESSION['userName'])) {
